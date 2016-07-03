@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="photos from our activities" />
+    <meta name="keywords" content="Photogallery" />
+    <meta name="author" content="Websense.cz" />
+    <meta name="robots" content="all,follow" />
+    <meta name="google-site-verification" content="iMPhGXZ_WDadKlPF1hlFjqQMIV1HMBtpc43jpMqGJXg" />
+
+    <link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen,projection,tv" />
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="/css/screen-ie8.css" media="screen,projection,tv" />
+    <![endif]-->
+	<!--[if lte IE 10]>
+    <link rel="stylesheet" type="text/css" href="/css/screen-ie9.css" media="screen,projection,tv" />
+    <![endif]-->
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <script  type="text/javascript">var lang = "en";</script>
+    <script src="/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/js/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="/js/scripts.js?uid=2" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/caman.full.min.js"></script>
+
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=" type="text/javascript"></script>
+    <title>Photogallery | JCMM - Jihomoravské centrum pro mezinárodní mobilitu</title>
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="/" title="South Moravian Centre For International Mobility">
+                <img src="/img/logo.png" alt="logo JCMM" title="South Moravian Centre For International Mobility" />
+            </a>
+        </div>
+
+        <div class="lang-select">
+            <a href="/ru/"  title="переключение на русский">RU</a>
+            <a href="/en/" class="active" title="switch to english">EN</a>
+            <a href="/cz/"  title="přepnout do češtiny">CS</a>
+        </div>
+        <div class="user-menu">
+                <a class="log-in popup-btn" href="#login-form" title="User login">Log in</a>
+            <a class="search popup-btn" href="#search-form" title="Search this web">Search</a>
+        </div>
+
+            <div id="login-form" class="popup">
+                <form action="?" method="post">
+                    <p class="log-in">Log in</p>
+                    <p>
+                        <input class="inp italic" type="text" name="login" id="dropdown_login" value="" placeholder="email" />
+                        <input class="inp italic" type="password" name="password" value="" placeholder="password" />
+                        <input class="btn btn-105" type="submit" value="Log in" name="login_submit" />
+						<a class="forgotten-btn" href="/forgotten-password.html?email=" onclick="this.href = this.href + $('#dropdown_login').val(); this.form.submit();">Forgot your password?</a>
+                    </p>
+                </form>
+            </div>
+
+        <div id="search-form" class="popup">
+            <form action="/en/search.html" method="get">
+                <p class="search">Search</p>
+                <p>
+                    <input class="inp italic" type="text" name="keywords" placeholder="keywords.." value="" />
+                    <input class="btn btn-78" type="submit" value="Search" name="search_submit" />
+                </p>
+            </form>
+        </div>
+
+        <nav class="menu">
+<a href="/en/projects/students.html" class="students" title="students section">Students</a>
+<span class="separate-horizon">&nbsp;</span>
+
+<a href="/en/projects/scientists.html" class="scientists" title="scientists section">Scientists</a>
+<span class="separate-horizon">&nbsp;</span>
+
+<a href="/en/projects/teachers.html" class="teachers" title="teachers section">Teachers</a>
+<span class="separate-horizon narrow">&nbsp;</span>
+
+<a href="/en/projects.html" title="All JCMM projects" class="options"></a>
+
+<a class="left-gap" href="/en/about-jcmm.html" title="about JCMM">About us</a>
+<a href="/en/contact.html" title="contact info">Contact</a>        </nav>
+
+    </div>
+</div>
+
+<div class="container main">
+
+        <div class="flashes">
+        </div>
+
+    
+
+    <div class="menuLayout article">
+    <div class="submenu home">
+        <ul>
+            <li class="base"><a href="/en/home.html" title="JCMM" class="title">JCMM</a></li>
+			
+                <li class="opened">
+					<a href="/en/about-jcmm.html" title="if you want to know more about us">About JCMM</a>
+					<ul>
+                        <li class="sub"><a href="/en/partners.html" title="more about our partners">Partners</a></li>
+                        <li class="sub"><a href="/en/jcmm-logo-download.html" title="">JCMM logo download</a></li>
+					</ul>
+				</li>
+                <li>
+					<a href="/en/our-team.html" title="people in JCMM">Our team</a>
+				</li>
+                <li>
+					<a href="/en/jcmm-in-news.html" title="JCMM in News">JCMM in News</a>
+				</li>
+                <li>
+					<a href="/en/press-releases.html" title="press releases">Press releases</a>
+				</li>
+                <li>
+					<a href="/en/newsletter-jcmm.html" title="quarterly newsletter">Newsletter JCMM</a>
+				</li>
+                <li>
+					<a href="/en/contact.html" title="our address">Contact</a>
+				</li>
+                <li>
+					<a href="/en/photogallery.html" title="photos from our activities" class="active">Photogallery</a>
+				</li>
+        </ul>
+
+    </div>
+
+    <div class="text-column">
+    <h1>Photogallery</h1><div class="album-box">
+                     <a class="img-box" href="/photogallery/brno-ph.d-talent-2015-67.html" title="Show album Brno Ph.D. Talent 2015"><img src="/images/gallery/t_pic1730.jpg" alt="Brno Ph.D. Talent 2015" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/brno-ph.d-talent-2015-67.html" title="Show album Brno Ph.D. Talent 2015">Brno Ph.D. Talent 2015</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/trip-to-punkva-caves-66.html" title="Show album Trip to Punkva Caves"><img src="/images/gallery/t_pic1699.jpg" alt="Trip to Punkva Caves" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/trip-to-punkva-caves-66.html" title="Show album Trip to Punkva Caves">Trip to Punkva Caves</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/official-welcome-of-international-students-2014-65.html" title="Show album Official Welcome of International Students 2014"><img src="/images/gallery/t_pic1664.jpg" alt="Official Welcome of International Students 2014" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/official-welcome-of-international-students-2014-65.html" title="Show album Official Welcome of International Students 2014">Official Welcome of International S</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/czech-centre-in-izhevsk-in-2013/2014-64.html" title="Show album Czech Centre in Izhevsk in 2013/2014"><img src="/images/gallery/t_pic1643.jpg" alt="Czech Centre in Izhevsk in 2013/2014" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/czech-centre-in-izhevsk-in-2013/2014-64.html" title="Show album Czech Centre in Izhevsk in 2013/2014">Czech Centre in Izhevsk in 2013/201</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/talents-under-the-stars-63.html" title="Show album Talents under the stars"><img src="/images/gallery/t_pic1592.jpg" alt="Talents under the stars" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/talents-under-the-stars-63.html" title="Show album Talents under the stars">Talents under the stars</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/welcome-of-international-students-2013/2014-62.html" title="Show album Welcome of international students 2013/2014"><img src="/images/gallery/t_pic1559.jpg" alt="Welcome of international students 2013/2014" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/welcome-of-international-students-2013/2014-62.html" title="Show album Welcome of international students 2013/2014">Welcome of international students 2</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-59.html" title="Show album "><img src="/images/gallery/t_pic1476.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-59.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/welcome-party-of-international-students-in-academic-year-2012/2013-58.html" title="Show album Welcome party of international students in academic year 2012/2013"><img src="/images/gallery/t_pic1268.jpg" alt="Welcome party of international students in academic year 2012/2013" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/welcome-party-of-international-students-in-academic-year-2012/2013-58.html" title="Show album Welcome party of international students in academic year 2012/2013">Welcome party of international stud</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/close-encounters-of-3-kinds-56.html" title="Show album Close Encounters of 3 Kinds"><img src="/images/gallery/t_pic1400.jpg" alt="Close Encounters of 3 Kinds" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/close-encounters-of-3-kinds-56.html" title="Show album Close Encounters of 3 Kinds">Close Encounters of 3 Kinds</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/one-day-trip-to-the-advent-wien-54.html" title="Show album One day trip to the Advent Wien"><img src="/images/gallery/t_pic1224.jpg" alt="One day trip to the Advent Wien" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/one-day-trip-to-the-advent-wien-54.html" title="Show album One day trip to the Advent Wien">One day trip to the Advent Wien</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-53.html" title="Show album "><img src="/images/gallery/t_pic1201.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-53.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/excursion-at-moravsky-kras-with-international-students-52.html" title="Show album Excursion at Moravský kras with international students"><img src="/images/gallery/t_pic1187.jpg" alt="Excursion at Moravský kras with international students" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/excursion-at-moravsky-kras-with-international-students-52.html" title="Show album Excursion at Moravský kras with international students">Excursion at Moravský kras with int</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-51.html" title="Show album "><img src="/images/gallery/t_pic1139.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-51.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/seminar-on-international-mobility-of-young-researchers-50.html" title="Show album Seminar on International Mobility of Young Researchers"><img src="/images/gallery/t_pic1132.jpg" alt="Seminar on International Mobility of Young Researchers" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/seminar-on-international-mobility-of-young-researchers-50.html" title="Show album Seminar on International Mobility of Young Researchers">Seminar on International Mobility o</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-48.html" title="Show album "><img src="/images/gallery/t_pic1101.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-48.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/-47.html" title="Show album "><img src="/images/gallery/t_pic1090.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-47.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-46.html" title="Show album "><img src="/images/gallery/t_pic1021.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-46.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-45.html" title="Show album "><img src="/images/gallery/t_pic1020.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-45.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-43.html" title="Show album "><img src="/images/gallery/t_pic984.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-43.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/-42.html" title="Show album "><img src="/images/gallery/t_pic974.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-42.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-41.html" title="Show album "><img src="/images/gallery/t_pic943.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-41.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/internship-of-ulyanovsk-students-in-brno-40.html" title="Show album Internship of Ulyanovsk students in Brno"><img src="/images/gallery/t_pic917.jpg" alt="Internship of Ulyanovsk students in Brno" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/internship-of-ulyanovsk-students-in-brno-40.html" title="Show album Internship of Ulyanovsk students in Brno">Internship of Ulyanovsk students in</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/official-opening-of-czech-centre-in-ulyanovsk-38.html" title="Show album Official opening of Czech centre in Ulyanovsk"><img src="/images/gallery/t_pic776.jpg" alt="Official opening of Czech centre in Ulyanovsk" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/official-opening-of-czech-centre-in-ulyanovsk-38.html" title="Show album Official opening of Czech centre in Ulyanovsk">Official opening of Czech centre in</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/-35.html" title="Show album "><img src="/images/gallery/t_pic708.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-35.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/brno-phd-talent-2010-39.html" title="Show album Brno PhD Talent 2010"><img src="/images/gallery/t_pic916.jpg" alt="Brno PhD Talent 2010" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/brno-phd-talent-2010-39.html" title="Show album Brno PhD Talent 2010">Brno PhD Talent 2010</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/czech-centre-in-khanty-mansiysk-37.html" title="Show album Czech centre in Khanty-Mansiysk"><img src="/images/gallery/t_pic775.jpg" alt="Czech centre in Khanty-Mansiysk" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/czech-centre-in-khanty-mansiysk-37.html" title="Show album Czech centre in Khanty-Mansiysk">Czech centre in Khanty-Mansiysk</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-34.html" title="Show album "><img src="/images/gallery/t_pic607.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-34.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/-33.html" title="Show album "><img src="/images/gallery/t_pic583.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-33.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-32.html" title="Show album "><img src="/images/gallery/t_pic563.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-32.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-30.html" title="Show album "><img src="/images/gallery/t_pic526.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-30.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/environmental-course----photograhps-from-university-campus-bohunice-29.html" title="Show album ENVIRONMENTAL COURSE  - PHOTOGRAHPS FROM UNIVERSITY CAMPUS BOHUNICE"><img src="/images/gallery/t_pic479.jpg" alt="ENVIRONMENTAL COURSE  - PHOTOGRAHPS FROM UNIVERSITY CAMPUS BOHUNICE" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/environmental-course----photograhps-from-university-campus-bohunice-29.html" title="Show album ENVIRONMENTAL COURSE  - PHOTOGRAHPS FROM UNIVERSITY CAMPUS BOHUNICE">ENVIRONMENTAL COURSE  - PHOTOGRAHPS</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/environmental-course----photograhps-from-student-39-s-presentations-at-high-schools-28.html" title="Show album ENVIRONMENTAL COURSE  - PHOTOGRAHPS FROM STUDENT&#39;S PRESENTATIONS AT HIGH SCHOOLS"><img src="/images/gallery/t_pic453.jpg" alt="ENVIRONMENTAL COURSE  - PHOTOGRAHPS FROM STUDENT&#39;S PRESENTATIONS AT HIGH SCHOOLS" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/environmental-course----photograhps-from-student-39-s-presentations-at-high-schools-28.html" title="Show album ENVIRONMENTAL COURSE  - PHOTOGRAHPS FROM STUDENT&#39;S PRESENTATIONS AT HIGH SCHOOLS">ENVIRONMENTAL COURSE  - PHOTOGRAHPS</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-26.html" title="Show album "><img src="/images/gallery/t_pic431.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-26.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-25.html" title="Show album "><img src="/images/gallery/t_pic398.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-25.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/visit-of-ulyanovsk-state-university-23rd-april-2010-23.html" title="Show album Visit of Ulyanovsk State University 23rd April 2010"><img src="/images/gallery/t_pic369.jpg" alt="Visit of Ulyanovsk State University 23rd April 2010" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/visit-of-ulyanovsk-state-university-23rd-april-2010-23.html" title="Show album Visit of Ulyanovsk State University 23rd April 2010">Visit of Ulyanovsk State University</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/ceremonial-opening-of-czech-centre-in-izhevsk-russia-21.4.2010-22.html" title="Show album Ceremonial opening of Czech centre in Izhevsk, Russia 21.4.2010"><img src="/images/gallery/t_pic354.jpg" alt="Ceremonial opening of Czech centre in Izhevsk, Russia 21.4.2010" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/ceremonial-opening-of-czech-centre-in-izhevsk-russia-21.4.2010-22.html" title="Show album Ceremonial opening of Czech centre in Izhevsk, Russia 21.4.2010">Ceremonial opening of Czech centre </a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-21.html" title="Show album "><img src="/images/gallery/t_pic305.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-21.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-20.html" title="Show album "><img src="/images/gallery/t_pic277.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-20.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-19.html" title="Show album "><img src="/images/gallery/t_pic292.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-19.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/lectorate-of-czech-language-luhansk-in-ukraine-18.html" title="Show album lectorate of Czech language Luhansk in Ukraine"><img src="/images/gallery/t_pic266.jpg" alt="lectorate of Czech language Luhansk in Ukraine" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/lectorate-of-czech-language-luhansk-in-ukraine-18.html" title="Show album lectorate of Czech language Luhansk in Ukraine">lectorate of Czech language Luhansk</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-17.html" title="Show album "><img src="/images/gallery/t_pic239.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-17.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-16.html" title="Show album "><img src="/images/gallery/t_pic199.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-16.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/-15.html" title="Show album "><img src="/images/gallery/t_pic155.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-15.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/-14.html" title="Show album "><img src="/images/gallery/t_pic135.jpg" alt="" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/-14.html" title="Show album "></a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/trip-of-the-talented-students--13.html" title="Show album Trip of the Talented Students "><img src="/images/gallery/t_pic117.jpg" alt="Trip of the Talented Students " /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/trip-of-the-talented-students--13.html" title="Show album Trip of the Talented Students ">Trip of the Talented Students </a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/euraxess-excursion-moravian-karst-12.html" title="Show album EURAXESS Excursion Moravian karst"><img src="/images/gallery/t_pic109.jpg" alt="EURAXESS Excursion Moravian karst" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/euraxess-excursion-moravian-karst-12.html" title="Show album EURAXESS Excursion Moravian karst">EURAXESS Excursion Moravian karst</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box">
+                     <a class="img-box" href="/photogallery/high-school-students-11.html" title="Show album High-school students"><img src="/images/gallery/t_pic95.jpg" alt="High-school students" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/high-school-students-11.html" title="Show album High-school students">High-school students</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div><div class="album-box no-margin">
+                     <a class="img-box" href="/photogallery/foreign-university-students-10.html" title="Show album Foreign university students"><img src="/images/gallery/t_pic99.jpg" alt="Foreign university students" /></a>
+                     <div class="img-text">
+                       <h3><a href="/photogallery/foreign-university-students-10.html" title="Show album Foreign university students">Foreign university students</a></h3>
+                     </div>
+                     <div class="clear">&nbsp;</div>
+                   </div>
+    </div>
+        <span class="clear"></span>
+    </div>
+
+        <div class="clear">&nbsp;</div>
+
+</div>
+
+
+<div class="info">
+    <div class="bg">
+        <div class="container">
+<div class="two-column">
+    <a class="logo" href="/" title="JCMM"><span>JCMM</span></a>
+    <p class="jcmm-anot"><small>We are connecting students, teachers, scientists and those, who are willing to transfer their know-how and knowledge to other people.&nbsp;&nbsp; 
+</small></p>
+    <p class="dotted"><a href="/en/about-jcmm.html" class="back">More</a></p>
+
+    <h3 class="socnet-h3"><span>Support us on social networks</span></h3>
+    <a href="http://www.facebook.com/jcmm.brno" class="socnet fb" title="visit us on Facebook">Facebook</a>
+    <a href="#" class="socnet tw" title="Sledujte nás na Twitteru">Twitter</a>
+    <a href="#" class="socnet gp" title="Navštivte nás na Google +">Google +</a>
+    <a href="#" class="socnet ln" title="Navštivte nás na Linkedin">Linkedin</a>
+</div>
+
+<div class="two-column">
+    <div class="links" id="find-more">
+        <h3><span>Look for more</span></h3>
+        <a href="/projects.html">All JCMM projects</a>
+        <a href="/press releases.html">Press releases</a>
+        <a href="/newsletter-jcmm.html">JCMM newsletter</a>
+        <a href="/about-jcmm.html">About JCMM</a>
+    </div>
+    <div class="links" id="most-visited">
+        <h3><span>Most popular</span></h3>
+    </div>
+</div>
+<div class="clear">&nbsp;</div>        </div>
+    </div>
+</div>
+
+<div class="footer gray">
+    <div class="container">
+        <a class="contact" href="/en/contact.html" title="Quick and easy way to contact us">contact form</a>
+        <a class="map" href="/en/contact.html" title="show the venue on map">Mezírka 775/1, 602 00 Brno</a>
+        <a class="mail" href="mailto:info@jcmm.cz" title="contact e-mail">info@jcmm.cz</a>
+        <span class="phone1">+420 541 211 043</span>
+        <span class="phone2">+420 541 211 033</span>
+        <div class="clear">&nbsp;</div>
+    </div>
+</div>
+
+<div class="footer blue">
+    <div class="container">
+        <a class="link rss" href="/rss/news.php">RSS</a>
+        <a class="link sitemap" href="/en/sitemap.html">Site map</a>
+        <a class="link acsblt" href="?high_contrast=1">View for visually handicapped</a>
+
+        <span>© 2012 <a href="http://www.jcmm.cz" title="South Moravian Centre For International Mobility">JCMM, z.s.p.o</a></span>
+        <span class="hmd"><a href="http://www.hmd.cz" title="Na web a portfolio Handmade Dreams">Handmade Dreams</a> a <a class="websense" href="http://www.websense.cz" title="Webové aplikace Brno">Websense Brno</a></span>
+
+        <div class="clear">&nbsp;</div>
+    </div>
+</div>
+
+<div class="side-panel">
+    <a class="fb" href="http://www.facebook.com/jcmm.brno" title="visit us on Facebook">&nbsp;</a>
+    <a class="contact" href="/en/contact.html">&nbsp;</a>
+    <a class="home" href="/en/">&nbsp;</a>
+    <a class="top" href="#">&nbsp;</a>
+</div>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9345461-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
