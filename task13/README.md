@@ -8,10 +8,3 @@ All required files will installing on your operating system.
 4. To run the script in a terminal execute:
 	php autoload.php
 
-To run the unit tests you need:
-1. Download PHPStorm from the official site
-2. Set it
-3. Open a local folder with a project in it 
-4. Initialize composer
-5. Start configuration "PHPUnit"
-6. View the result

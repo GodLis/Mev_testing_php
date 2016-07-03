@@ -7,10 +7,9 @@ require 'Palindromv1.php';
 require 'PalindromV2.php';
 
 $word = 'kazak';
+echo $word ."\n";
 $sr = floor(strlen($word)/2);
-echo $sr ."\n";
 $k = strlen($word);
-echo $k ."\n";
 
 echo "Variant 1:" ."\n";
 $tmp = new Palindromv1();

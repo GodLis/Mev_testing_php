@@ -11,4 +11,4 @@ $var3 = mt_rand(1, 20);
 $var4 = mt_rand(1, 20);
 
 $tmp = new MathExp();
-echo $tmp->mathExp($var1, $var2, $var3, $var4);
+echo $tmp->mathExp($var1, $var2, $var3, $var4) ."\n";

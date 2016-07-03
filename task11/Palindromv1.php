@@ -17,7 +17,6 @@ class Palindromv1
     public function palindromV1($word, $sr, $k)
     {
         $arr1 = str_split($word);
-        print_r($arr1);
         for ($i=0; $i<$sr; $i++) {
             if (!empty($arr1[$k - $i - 1])) {
                 if ($arr1[$i] != $arr1[$k-$i-1]) {

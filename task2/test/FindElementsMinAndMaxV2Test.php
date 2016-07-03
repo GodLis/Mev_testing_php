@@ -4,6 +4,10 @@ namespace OlechkaBrajko\Task2;
 
 require "FindElementsMinAndMaxV2.php";
 
+/**
+ * Class FindElementsMinAndMaxV2Test
+ * @package OlechkaBrajko\Task2
+ */
 class FindElementsMinAndMaxV2Test extends \PHPUnit_Framework_TestCase
 {
     private $tmp;

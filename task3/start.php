@@ -17,18 +17,18 @@ for ($i=0; $i<$k; $i++) {
     echo ($array[$i] ." ");
 }
 
-sort($array);
-
 echo "\nCортировка встроенной функцией:\n";
+
+sort($array);
 
 for ($i=0; $i<$k; $i++) {
     echo $array[$i] ." ";
 }
 
+echo "\nБыстрая сортировка:\n";
+
 $tmp = new QuickSort();
 $tmp->quickSort($array);
-
-echo "\nБыстрая сортировка:\n";
 
 for ($i=0; $i<$k; $i++) {
     echo $array[$i] ." ";

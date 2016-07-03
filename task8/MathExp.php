@@ -17,6 +17,9 @@ class MathExp
      */
     public function mathExp($var1, $var2, $var3, $var4)
     {
-        return (($var1 + $var2)*$var3)-$var4 ."\n";
+        if ($var1 !== 0) {
+            return (($var1 + $var2) * $var3) - ($var4 + $var2) / $var1;
+        }
+        return false;
     }
 }

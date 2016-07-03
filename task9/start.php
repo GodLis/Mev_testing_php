@@ -21,4 +21,4 @@ echo $res = $tmp->regExpStr($pattern, $subject) ."\n";
 
 $tmp = new UserSeachStr();
 echo "Поиск вручную: ";
-echo $res = $tmp->userSeachStr($part, $subject) ."\n";
+$tmp->userSeachStr($part, $subject) ."\n";
