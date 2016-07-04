@@ -1,25 +1,30 @@
 <?php
 
-namespace test;
+namespace OlechkaBrajko\Task5;
 
+/**
+ * Class MainClass
+ * @package OlechkaBrajko\Task5
+ */
 class MainClass
 {
-    public function perebor($k)
+    /**
+     * @param $k
+     * @param $mas
+     * @param $n
+     * @param $m
+     */
+    public function perebor($k, $mas, $n, $m)
     {
-        $m = 4;
-        $n = 3;
-        $mas = [];
         if ($k == $n) {
-            for ($i=$k; $i<$k+3; $i++) {
-                print( $mas[$i]);
-//                $k = 0;
+            for ($i=$k-3; $i<$k; $i++) {
+                 echo $mas[$i];
             }
             echo "\n";
         } else {
             for ($j = 1; $j <= $m; $j++) {
                 $mas[$k] = $j;
-                echo $mas[$k];
-                $this->perebor($k + 1);
+                $this->perebor($k + 1, $mas, $n, $m);
             }
         }
     }
