@@ -1,41 +1,48 @@
 <?php
 
-$handle = fopen("1.txt", "r");
-$handle2 = fopen("2.txt", "w+");
+namespace OlechkaBrajko\Task6;
 
-while (!feof($handle))
+require 'vendor/autoload.php';
+require 'MainClass.php';
+
+$mas = [];
+$n = mt_rand(3, 4);
+$yes = false;
+
+function next($mas, $yes, $n)
 {
-$ar = array();
-$line = fgets($handle);
-if ($line == '')
-{
-break;
+    function swap($a, $b)
+    {
+        $c = $a;
+        $a = $b;
+        $b = $c;
+    }
+    $i = $n-1;
+    while (($j<$n) && ($mas[$j+1]>$mas[$i])) {
+        ++$j;
+    }
+    if ($i>0) {
+        $j = $i+1;
+        while (($j<$n) and ($mas[$j+1]>$mas[$i])) {
+            ++$j;
+        }
+        swap($mas[$i], $mas[$j]);
+        for ($j = $i+1; $j<($n+$i)/2; $j++) {
+            swap($mas[$j], $mas[$n-$j+$i+1]);
+        }
+        $yes = true;
+    } else {
+        $yes = false;
+    }
 }
 
-$ar = explode('.', $line);
-$c = count($ar);
-array_push($ar, $c + 1);
-$c+= 1;
-$ar = array_map('trim', $ar);
-echo '<br />';
-$s = implode('.', $ar);
-echo $s;
-fwrite($handle2, "$s\r\n");
-while ($c != 1)
-{
-$c--;
-list($ar[$c-1], $ar[$c]) = array(
-$ar[$c],
-$ar[$c-1]
-);
-echo '<br />';
-$s = implode('.', $ar);
-echo $s;
-fwrite($handle2, "$s\r\n");
+for ($i=1; $i<=$n; $i++) {
+    $mas[$i] = $i;
 }
-}
-
-fclose($handle);
-fclose($handle2);
-unlink("1.txt");
-rename("2.txt", "1.txt");
+do {
+    for ($i=1; $i<=$n; $i++) {
+        echo $mas[$i];
+    }
+    echo "\n";
+    next($mas, $yes, $n);
+} while (!$yes);

@@ -1,49 +1,85 @@
 <?php
-//
-//namespace OlechkaBrajko\task16;
-//
-//require "vendor/autoload.php";
-//
-//$username = "olechkabrajko";
-//$maxpost = '10';
-//$html = file_get_html("https://twitter.com/" .$username);
-//$i = '0';
-//foreach ($html->find('li.expanding-stream-item') as $article) {
-//    $item['time'] = $article->find('small.time', 0)->innertext;
-//    $item['text'] = $article->find('p.js-tweet-text', 0)->innertext;
-//
-//    $article[]=$item;
-//    $i++;
-//    if ($i == $maxpost) {
-//        break;
-//    }
-//}
 
-//$username = 'TutsPlusCode';
-//$user_info = simplexml_load_file('https://twitter.com/TutsPlusCode');
-//$user_id = $user_info[0]->id;
-//$timeline = simplexml_load_file('http://twitter.com/statuses/user_timeline/'.$user_id.'.rss');
-//$count = 3;
-//for ($i=0; $i<$count; $i++) {
-//    echo date('d.m.Y G:i', strtotime($timeline->channel->item[$i]->pubDate));
-//    echo $timeline->channel->item[$i]->title;
-//    echo $timeline->channel->item[$i]->link;
-//}
-//@file_get_contents('http://google.ru');
-//var_dump($http_response_header);
-//
-//urlencode('http://twitter.com/statuses/user_timeline/id.format?count=20');
-//$link = 'http://twitter.com/statuses/user_timeline/iwebwin.json';
-//$json = file_get_contents($link);
-//$massive = array();
-//$massive = json_decode($json);
-//print_r($massive);
+namespace OlechkaBrajko\Task16;
+
+require 'vendor/autoload.php';
+include_once 'twitteroauth.php';
+
+define('TWITTER_KEY', 'Fkg005U8zwXZ4CmbSPuXkZdsa');
+define('TWITTER_SECRET', '427IHJZALKu3PYpUvUpDn7qHQPvrIcdfPDdRq9x9rTN8xPKXtE');
+
+/**
+ * Шаг 1
+ * Получаем ссылку для регистрации нашего приложения к нужному аккаунту
+ *
+ * @return void
+ */
+function generateAuthLink()
+{
+    $oauth = new TwitterOAuth(TWITTER_KEY, TWITTER_SECRET);
+
+    $request = $oauth->getRequestToken();
+
+    $requestToken       = $request['oauth_token'];
+    $requestTokenSecret = $request['oauth_token_secret'];
+
+    $requestStr = 'request_token=' . $requestToken . "\n";
+    $requestStr .= 'request_token_secret=' . $requestTokenSecret . "\n";
+
+    $filename = fopen("request.txt", "a+");
+//    fwrite($filename, $requestStr);
+
+    if (is_writable($filename)) {
+        if (!$handle = fopen($filename, 'a')) {
+            echo "Не могу открыть файл ($filename)";
+            exit;
+        }
+
+        if (fwrite($handle, $requestStr) ===false) {
+            echo "Не могу произвести запись в файл ($filename)";
+            exit;
+        }
+
+        echo "Ура! Записали ($requestStr) в файл ($filename)";
+        fclose($handle);
+
+    } else {
+        echo "Файл $filename недоступен для записи";
+    }
 
 
-//@file_get_contents('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=<olechkabrajko>');
-//var_dump($http_response_header);
-//
 
-//$str = file_get_contents ('https://twitter.com/TutsPlusCode');
-//print_r($str);
+    // Создаем ссылку
+    $registerURL = $oauth->getAuthorizeURL($request);
+    // Показываем ссылку
+    var_dump($registerURL);
+}
 
+generateAuthLink();
+
+/**
+ * Шаг 2
+ * Получаем коды доступа
+ *
+ * @param  $requestToken Токен для запроса кодов дсотупа
+ * @param  $requestTokenSecret Секретный токен для запроса кодов доступа
+ * @param  $pin PIN доступа
+ * @return void
+ */
+function generateOauthToken($requestToken, $requestTokenSecret, $pin)
+{
+
+    $oauth = new TwitterOAuth(TWITTER_KEY, TWITTER_SECRET, $requestToken, $requestTokenSecret);
+
+    // Создаем коды доступа по PIN коду
+    $request = $oauth->getAccessToken($pin);
+    $accessToken       = $request['oauth_token'];
+    $accessTokenSecret = $request['oauth_token_secret'];
+
+    $requestStr = 'accessToken=' . $accessToken . "\n";
+    $requestStr .= 'accessTokenSecret=' . $accessTokenSecret . "\n";
+
+    file_put_contents('access.txt', $requestStr);
+
+    echo "ok";
+}

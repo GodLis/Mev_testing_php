@@ -1,5 +1,16 @@
 {
-    "require": {
-        "paquettg/php-html-parser": "^1.7"
+  "name": "OlechkaBrajko/Task16",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Olechka Brajko",
+      "email": "olechkabrajko@gmail.com"
     }
+  ],
+  "require": {
+    "keradus/psr4autoloader": "v2.0.1",
+    "phpunit/phpunit": "5.5.x-dev"
+  }
 }

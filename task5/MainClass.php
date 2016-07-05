@@ -1,7 +1,5 @@
 <?php
-
 namespace OlechkaBrajko\Task5;
-
 /**
  * Class MainClass
  * @package OlechkaBrajko\Task5
@@ -18,7 +16,7 @@ class MainClass
     {
         if ($k == $n) {
             for ($i=$k-3; $i<$k; $i++) {
-                 echo $mas[$i];
+                echo $mas[$i];
             }
             echo "\n";
         } else {
