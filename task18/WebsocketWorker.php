@@ -199,34 +199,28 @@ abstract class WebsocketWorker
 
         switch ($type) {
             case 'text':
-                // first byte indicates FIN, Text-Frame (10000001):
                 $frameHead[0] = 129;
                 break;
 
             case 'close':
-                // first byte indicates FIN, Close Frame(10001000):
                 $frameHead[0] = 136;
                 break;
 
             case 'ping':
-                // first byte indicates FIN, Ping frame (10001001):
                 $frameHead[0] = 137;
                 break;
 
             case 'pong':
-                // first byte indicates FIN, Pong frame (10001010):
                 $frameHead[0] = 138;
                 break;
         }
 
-        // set mask and payload length (using 1, 3 or 9 bytes)
         if ($payloadLength > 65535) {
             $payloadLengthBin = str_split(sprintf('%064b', $payloadLength), 8);
             $frameHead[1] = ($masked === true) ? 255 : 127;
             for ($i = 0; $i < 8; $i++) {
                 $frameHead[$i + 2] = bindec($payloadLengthBin[$i]);
             }
-            // most significant bit MUST be 0
             if ($frameHead[2] > 127) {
                 return ['type' => '', 'payload' => '', 'error' => 'frame too large (1004)'];
             }
@@ -239,12 +233,10 @@ abstract class WebsocketWorker
             $frameHead[1] = ($masked === true) ? $payloadLength + 128 : $payloadLength;
         }
 
-        // convert frame-head to string:
         foreach (array_keys($frameHead) as $i) {
             $frameHead[$i] = chr($frameHead[$i]);
         }
         if ($masked === true) {
-            // generate a random mask:
             $mask = [];
             for ($i = 0; $i < 4; $i++) {
                 $mask[$i] = chr(rand(0, 255));
@@ -254,7 +246,6 @@ abstract class WebsocketWorker
         }
         $frame = implode('', $frameHead);
 
-        // append payload to frame:
         for ($i = 0; $i < $payloadLength; $i++) {
             $frame .= ($masked === true) ? $payload[$i] ^ $mask[$i % 4] : $payload[$i];
         }
@@ -271,20 +262,17 @@ abstract class WebsocketWorker
         $unmaskedPayload = '';
         $decodedData =[];
 
-        // estimate frame type:
         $firstByteBinary = sprintf('%08b', ord($data[0]));
         $secondByteBinary = sprintf('%08b', ord($data[1]));
         $opcode = bindec(substr($firstByteBinary, 4, 4));
         $isMasked = ($secondByteBinary[0] == '1') ? true : false;
         $payloadLength = ord($data[1]) & 127;
 
-        // unmasked frame is received:
         if (!$isMasked) {
             return ['type' => '', 'payload' => '', 'error' => 'protocol error (1002)'];
         }
 
         switch ($opcode) {
-        // text frame:
             case 1:
                 $decodedData['type'] = 'text';
                 break;
@@ -293,17 +281,14 @@ abstract class WebsocketWorker
                 $decodedData['type'] = 'binary';
                 break;
 
-            // connection close frame:
             case 8:
                 $decodedData['type'] = 'close';
                 break;
 
-            // ping frame:
             case 9:
                 $decodedData['type'] = 'ping';
                 break;
 
-            // pong frame:
             case 10:
                 $decodedData['type'] = 'pong';
                 break;
