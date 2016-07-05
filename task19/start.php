@@ -5,7 +5,7 @@ namespace OlechkaBrajko\Task19;
 require "vendor/autoload.php";
 
 if (! extension_loaded('gd')) { // Проверяем установку библиотеки GD
-    echo 'GD не установлено. Обратитесь к администратору вашего сайта!';
+    echo 'GD не установлено';
     exit;
 }
 
@@ -45,6 +45,6 @@ if (is_array($aImgInfo) && count($aImgInfo)) {
 
     imagepng($rImage, "../imageWithWatermark.png");
 } else {
-    echo 'Image error!';
+    echo 'Ошибка изображения!';
     exit;
 }
