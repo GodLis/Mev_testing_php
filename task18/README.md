@@ -7,4 +7,4 @@ All required files will installing on your operating system.
 	cd path/to/folder/task1_v1/vendor
 4. To run the script in a terminal execute:
 	php autoload.php
-
+5. To close the script, please, press Ctrl + C.
