@@ -4,7 +4,8 @@ namespace GodLis;
 
 /**
  * Class SumElementsOfArrayV2
- * @package OlechkaBrajko\Task1
+ *
+ * @package GodLis
  */
 class SumElementsOfArrayV2
 {

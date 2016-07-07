@@ -1,8 +1,6 @@
 {
-  "name": "olechkabrajko/1",
-  "description": "description_text",
+  "name": "GodLis/Task4",
   "minimum-stability": "dev",
-  "license": "proprietary",
   "authors": [
     {
       "name": "Olechka Brajko",
@@ -10,13 +8,18 @@
     }
   ],
   "require": {
-    "phpunit/phpunit": "5.5.x-dev",
-    "keradus/psr4autoloader": "v2.0.1"
+    "php": ">=5.6",
+    "phpunit/phpunit": "5.5.x-dev"
+  },
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "2.*"
   },
   "autoload": {
-    "psr-4": {"Olechka Brajko\\1\\": "src/"},
+    "psr-4": {
+      "GodLis\\": "src/GodLis"
+    },
     "files":[
-        "start.php"
+        "src/GodLis/start.php"
     ]
   }
 }

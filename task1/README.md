@@ -1,7 +1,7 @@
-task1, finding the sum of the elements in the array (2 ways)
-=============================================================
+task1, sum of the elements in the array
+=======================================
 
-task1 it`s a PHP CLI script, that should use a PSR-4 Autoloader and finding the sum of the elements in the array by two ways.
+task1 it`s a PHP CLI script, that seach the sum of the elements in the array in two ways.
 
 task1 works with PHP 5.6 or later.
 
@@ -17,9 +17,9 @@ or download the [master.zip](https://github.com/GodLis/Mev_testing_php/archive/m
 
 To start a PHP CLI script you need to do the following:
 
-If you don`t have PHP interpretator earlier you need install php:
+You need to install composer into this project:
 
-$ sudo apt-get install php
+$ composer install
 
 Specify the path to the autoload file and doing:
 
