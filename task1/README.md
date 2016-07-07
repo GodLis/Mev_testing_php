@@ -17,11 +17,11 @@ or download the `Mev_testing_php-master.zip`_ file and extract it.
 
 To start a PHP CLI script you need to do the following:
 
-1. if you don`t have PHP interpretator earlier you need install php:
+If you don`t have PHP interpretator earlier you need install php:
 
 $ sudo apt-get install php
 
-2. specify the path to the autoload file and doing:
+Specify the path to the autoload file and doing:
 
 $ php autoload.php
 
