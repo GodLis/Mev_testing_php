@@ -1,8 +1,8 @@
 <?php
 
-namespace OlechkaBrajko\Task1;
+namespace GodLis\Tests;
 
-require_once "SumElementsOfArray.php";
+use GodLis\SumElementsOfArray;
 
 /**
  * Class SumElementsOfArrayTest

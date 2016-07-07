@@ -1,8 +1,6 @@
 {
-  "name": "olechkabrajko/1",
-  "description": "description_text",
+  "name": "GodLis/Task1",
   "minimum-stability": "dev",
-  "license": "proprietary",
   "authors": [
     {
       "name": "Olechka Brajko",
@@ -13,9 +11,14 @@
     "phpunit/phpunit": "5.5.x-dev"
   },
   "autoload": {
-    "psr-4": {"Olechka Brajko\\1\\": "src/"},
+    "psr-4": {
+      "GodLis\\": "src/GodLis"
+    },
     "files":[
-      "startV1.php"
-    ]
+      "src/GodLis/start.php"
+      ]
+  },
+  "autoload-dev" : {
+    "psr-4": { "GodLis\\Tests\\" : "tests/GodLis/Tests" }
   }
 }

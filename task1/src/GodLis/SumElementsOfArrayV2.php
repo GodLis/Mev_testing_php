@@ -1,6 +1,6 @@
 <?php
 
-namespace OlechkaBrajko\Task1;
+namespace GodLis;
 
 /**
  * Class SumElementsOfArrayV2
@@ -15,8 +15,8 @@ class SumElementsOfArrayV2
     public function arraySum($arr)
     {
         $sum = 0;
-        for ($i=0; $i<count($arr)-1; $i++) {
-            $sum =+ $arr[$i];
+        for ($i=0; $i<count($arr); $i++) {
+            $sum += $arr[$i];
         }
         return $sum;
     }

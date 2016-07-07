@@ -1,6 +1,6 @@
 <?php
 
-namespace OlechkaBrajko\Task1;
+namespace GodLis;
 
 /**
  * Class SumElementsOfArray
