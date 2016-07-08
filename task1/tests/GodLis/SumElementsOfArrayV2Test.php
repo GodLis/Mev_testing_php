@@ -2,6 +2,8 @@
 
 namespace GodLis\Tests;
 
+use GodLis\SumElementsOfArrayV2;
+
 /**
  * Class SumElementsOfArrayV2Test
  * @package GodLis\Tests

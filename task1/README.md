@@ -25,10 +25,10 @@ You need to install composer into this project:
 $ composer install
 ```
 
-Specify the path to the autoload file and doing:
+Specify the path to task1 and doing:
 
 ```
-$ php autoload.php
+$ php index.php
 ```
 
 Tests

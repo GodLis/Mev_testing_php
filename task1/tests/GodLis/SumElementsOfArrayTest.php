@@ -2,9 +2,11 @@
 
 namespace GodLis\Tests;
 
+use GodLis\SumElementsOfArray;
+
 /**
  * Class SumElementsOfArrayTest
- * @package test
+ * @package GodLis\Tests
  */
 class SumElementsOfArrayTest extends \PHPUnit_Framework_TestCase
 {
