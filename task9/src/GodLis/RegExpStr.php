@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class RegExpStr
- * @package OlechkaBrajko\Task9
+ * @package GodLis
  */
 class RegExpStr
 {

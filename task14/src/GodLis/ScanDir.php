@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class ScanDir
- * @package OlechkaBrajko\Task14
+ * @package GodLis
  */
 class ScanDir
 {

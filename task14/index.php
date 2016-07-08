@@ -1,10 +1,8 @@
 <?php
 
-namespace GodLis;
+require __DIR__ .'/vendor/autoload.php';
 
-use GodLis\ScanDir;
-
-$tmp = new ScanDir();
+$tmp = new \GodLis\ScanDir();
 $res = $tmp-> scanDir("/home/godlis/Mev/Mev_testing_php/task14/vendor/");
 for ($i = 0; $i<count($res); $i++) {
     echo $res[$i] ."\n";

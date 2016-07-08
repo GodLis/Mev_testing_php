@@ -1,8 +1,6 @@
 <?php
 
-namespace GodLis;
-
-use GodLis\UserFunction;
+require __DIR__ .'/vendor/autoload.php';
 
 $k = mt_rand(20, 30);
 $array1[] = [];
@@ -28,6 +26,6 @@ echo "\nНахождение общих елементов функцией 'arr
 print_r($result = array_intersect($array1, $array2));
 
 echo "Нахождение общих елементов функцией пользователя:\n";
-$tmp = new UserFunction();
+$tmp = new \GodLis\UserFunction();
 $tmp->userFunction($array1, $array2);
 echo "\n";

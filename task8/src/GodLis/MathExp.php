@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class MathExp
- * @package OlechkaBrajko\Task8
+ * @package GodLis
  */
 class MathExp
 {

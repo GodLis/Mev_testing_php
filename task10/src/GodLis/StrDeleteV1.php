@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class StrDeleteV1
- * @package OlechkaBrajko\Task10
+ * @package GodLis
  */
 class StrDeleteV1
 {

@@ -34,11 +34,5 @@ $ php autoload.php
 Tests
 -----
 
-To run the test suite, you need Composer and PHPUnit:
-
-```
-$ composer install
-
-$ phpunit
-```
+Run PHPUnit Configurations to start all tests together. 
 

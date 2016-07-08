@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class QuickSort
- * @package test
+ * @package GodLis
  */
 class QuickSort
 {

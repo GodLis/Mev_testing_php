@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class DataClass
- * @package OlechkaBrajko\Task12
+ * @package GodLis
  */
 class DataClass
 {

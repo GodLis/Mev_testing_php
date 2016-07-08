@@ -1,9 +1,6 @@
 <?php
 
-namespace GodLis;
-
-use GodLis\RegExpStr;
-use GodLis\UserSeachStr;
+require __DIR__ .'/vendor/autoload.php';
 
 $subject = "abcdef sdjfvh jbc ";
 $pattern = '/^def/';
@@ -14,10 +11,10 @@ echo $subject ."\n";
 echo "Подстрока: ";
 echo $pattern ."\n";
 
-$tmp = new RegExpStr();
+$tmp = new \GodLis\RegExpStr();
 echo "Поиск RegExp: ";
 echo $res = $tmp->regExpStr($pattern, $subject) ."\n";
 
-$tmp = new UserSeachStr();
+$tmp = new \GodLis\UserSeachStr();
 echo "Поиск вручную: ";
 $tmp->userSeachStr($part, $subject) ."\n";

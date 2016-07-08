@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class FindElementsMinAndMaxV2
- * @package OlechkaBrajko\Task2
+ * @package GodLis
  */
 class FindElementsMinAndMaxV2
 {

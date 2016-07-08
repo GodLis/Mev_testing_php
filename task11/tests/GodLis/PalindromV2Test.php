@@ -2,6 +2,8 @@
 
 namespace GodLis\Tests;
 
+use GodLis\PalindromV2;
+
 class PalindromV2Test extends \PHPUnit_Framework_TestCase
 {
     private $tmp;

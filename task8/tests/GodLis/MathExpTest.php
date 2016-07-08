@@ -2,6 +2,12 @@
 
 namespace GodLis\Tests;
 
+use GodLis\MathExp;
+
+/**
+ * Class MathExpTest
+ * @package GodLis\Tests
+ */
 class MathExpTest extends \PHPUnit_Framework_TestCase
 {
     private $tmp;

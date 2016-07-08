@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class UserSeachStr
- * @package OlechkaBrajko\Task9
+ * @package GodLis
  */
 class UserSeachStr
 {

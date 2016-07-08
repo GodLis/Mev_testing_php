@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class HappyTickets
- * @package OlechkaBrajko\Task7
+ * @package GodLis
  */
 class HappyTickets
 {

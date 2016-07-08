@@ -1,10 +1,8 @@
 <?php
 
-namespace GodLis;
+require __DIR__ .'/vendor/autoload.php';
 
 ini_set('display_errors', 1);
-
-use GodLis\TwitterAPIExchange;
 
 $settings = [
     'oauth_access_token' => "2282217062-7NdX0yvn90OpvZMgcieGdrkzlLHK2pepkIf8g5W",
@@ -16,12 +14,12 @@ $settings = [
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 
 $requestMethod = 'GET';
-$twitter = new TwitterAPIExchange($settings);
+$twitter = new \GodLis\TwitterAPIExchange($settings);
 
 $getfield = '?screen_name=TutsPlusCode';
 $json = $twitter->setGetfield($getfield)
-             ->buildOauth($url, $requestMethod)
-             ->performRequest();
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
 $data = json_decode($json, true);
 $id = $data[0]["id"];
 
@@ -34,8 +32,8 @@ do {
 		&count={$LIMIT}
 		&max_id={$reqestID}";
     $json = $twitter->setGetfield($getfield)
-         ->buildOauth($url, $requestMethod)
-         ->performRequest();
+        ->buildOauth($url, $requestMethod)
+        ->performRequest();
     $data = json_decode($json, true);
     $id = end($data)["id"];
     foreach ($data as $record) {

@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class Palindromv1
- * @package OlechkaBrajko\Task11
+ * @package GodLis
  */
 class Palindromv1
 {

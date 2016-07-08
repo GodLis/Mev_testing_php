@@ -2,6 +2,8 @@
 
 namespace GodLis\Tests;
 
+use GodLis\StrDeleteV1;
+
 class StrDeleteV1Test extends \PHPUnit_Framework_TestCase
 {
     private $tmp;

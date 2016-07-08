@@ -2,6 +2,8 @@
 
 namespace GodLis\Tests;
 
+use GodLis\FindElementsMinAndMax;
+
 /**
  * Class FindElementsMinAndMaxTest
  * @package OlechkaBrajko\Task2

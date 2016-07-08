@@ -2,11 +2,19 @@
 
 namespace GodLis;
 
+/**
+ * Class WebsocketMaster
+ * @package GodLis
+ */
 class WebsocketMaster
 {
     protected $workers = [];
     protected $clients = [];
 
+    /**
+     * WebsocketMaster constructor.
+     * @param $workers
+     */
     public function __construct($workers)
     {
         $this->clients = $this->workers = $workers;

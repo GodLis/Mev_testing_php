@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class UserFunction
- * @package OlechkaBrajko\Task4
+ * @package GodLis
  */
 class UserFunction
 {

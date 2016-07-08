@@ -2,9 +2,11 @@
 
 namespace GodLis\Tests;
 
+use GodLis\QuickSort;
+
 /**
  * Class QuickSortTest
- * @package OlechkaBrajko\Task3
+ * @package GodLis\Tests
  */
 class QuickSortTest extends \PHPUnit_Framework_TestCase
 {

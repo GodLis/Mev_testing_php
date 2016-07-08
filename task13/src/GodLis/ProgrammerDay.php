@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class ProgrammerDay
- * @package OlechkaBrajko\Task13
+ * @package GodLis
  */
 class ProgrammerDay
 {

@@ -2,6 +2,10 @@
 
 namespace GodLis;
 
+/**
+ * Class WebsocketServer
+ * @package GodLis
+ */
 class WebsocketServer
 {
     public function __construct($config)

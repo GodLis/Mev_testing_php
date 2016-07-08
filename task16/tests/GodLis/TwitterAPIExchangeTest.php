@@ -2,9 +2,8 @@
 
 namespace GodLis\Tests;
 
-use OlechkaBrajko\Task16\TwitterAPIExchange;
+use GodLis\TwitterAPIExchange;
 
-//require 'TwitterAPIExchange.php';
 /**
  * Class TwitterAPIExchangeTest
  *

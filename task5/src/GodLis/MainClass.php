@@ -4,7 +4,7 @@ namespace GodLis;
 
 /**
  * Class MainClass
- * @package OlechkaBrajko\Task5
+ * @package GodLis
  */
 class MainClass
 {

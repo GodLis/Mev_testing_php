@@ -1,10 +1,8 @@
 <?php
 
-namespace GodLis;
+require __DIR__ .'/vendor/autoload.php';
 
-use GodLis\MainClass;
-
-$tmp = new MainClass();
+$tmp = new \GodLis\MainClass();
 $mas = [];
 $m = mt_rand(4, 6);
 $n = mt_rand(2, 4);
