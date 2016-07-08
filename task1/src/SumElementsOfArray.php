@@ -28,7 +28,7 @@ class SumElementsOfArray
     /**
      * Returns an a sum of elements of array
      * SumElementsOfArray Class Doc Comment
-     * 
+     *
      * @param  $arr
      * @return number
      */

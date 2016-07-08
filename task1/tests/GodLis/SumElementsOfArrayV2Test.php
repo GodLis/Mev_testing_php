@@ -2,6 +2,10 @@
 
 namespace GodLis\Tests;
 
+/**
+ * Class SumElementsOfArrayV2Test
+ * @package GodLis\Tests
+ */
 class SumElementsOfArrayV2Test extends \PHPUnit_Framework_TestCase
 {
     private $tmp;

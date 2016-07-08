@@ -19,19 +19,24 @@ To start a PHP CLI script you need to do the following:
 
 You need to install composer into this project:
 
+```
 $ composer install
+```
 
 Specify the path to the autoload file and doing:
 
+```
 $ php autoload.php
-
+```
 
 Tests
 -----
 
 To run the test suite, you need Composer and PHPUnit:
 
+```
 $ composer install
 
 $ phpunit
+```
 
