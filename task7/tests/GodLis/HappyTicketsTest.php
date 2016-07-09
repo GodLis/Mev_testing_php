@@ -20,18 +20,6 @@ class HappyTicketsTest extends \PHPUnit_Framework_TestCase
 
     public function testHappyTickets()
     {
-        $var = 6;
-        $result = $this->tmp->lNum($var);
-        $this->assertEquals(55252, $result);
-
-        $var = 4;
-        $result = $this->tmp->lNum($var);
-        $this->assertEquals(670, $result);
-
-        $var = 2;
-        $result = $this->tmp->lNum($var);
-        $this->assertEquals(10, $result);;
-
         $var = 0;
         $result = $this->tmp->lNum($var);
         $this->assertFalse(false, $result);
