@@ -34,6 +34,9 @@ class SumElementsOfArray
      */
     public function arraySum($arr)
     {
-        return array_sum($arr);
+        if (!empty($arr)) {
+            return array_sum($arr);
+        }
+        return false;
     }
 }

@@ -15,13 +15,16 @@ class FindElementsMinAndMaxV2
      */
     public function seachMinElement($arr)
     {
-        $min = $arr[0];
-        for ($i=1; $i<count($arr)-1; $i++) {
-            if ($arr[$i]<$min) {
-                $min = $arr[$i];
+        if (!empty($arr)) {
+            $min = $arr[0];
+            for ($i=1; $i<count($arr)-1; $i++) {
+                if ($arr[$i]<$min) {
+                    $min = $arr[$i];
+                }
             }
+            return $min;
         }
-        return $min;
+        return false;
     }
 
     /**
@@ -30,12 +33,15 @@ class FindElementsMinAndMaxV2
      */
     public function seachMaxElement($arr)
     {
-        $max = $arr[0];
-        for ($i=1; $i<count($arr)-1; $i++) {
-            if ($arr[$i]>$max) {
-                $max = $arr[$i];
+        if (!empty($arr)) {
+            $max = $arr[0];
+            for ($i=1; $i<count($arr)-1; $i++) {
+                if ($arr[$i]>$max) {
+                    $max = $arr[$i];
+                }
             }
+            return $max;
         }
-        return $max;
+        return false;
     }
 }

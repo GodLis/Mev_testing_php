@@ -15,10 +15,13 @@ class SumElementsOfArrayV2
      */
     public function arraySum($arr)
     {
-        $sum = 0;
-        for ($i=0; $i<count($arr); $i++) {
-            $sum += $arr[$i];
+        if (!empty($arr)) {
+            $sum = 0;
+            for ($i=0; $i<count($arr); $i++) {
+                $sum += $arr[$i];
+            }
+            return $sum;
         }
-        return $sum;
+        return false;
     }
 }

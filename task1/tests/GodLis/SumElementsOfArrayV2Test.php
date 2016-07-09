@@ -31,5 +31,9 @@ class SumElementsOfArrayV2Test extends \PHPUnit_Framework_TestCase
         $arr_test = [5];
         $result = $this->tmp->arraySum($arr_test);
         $this->assertEquals(5, $result);
+
+        $arr_test = [];
+        $result = $this->tmp->arraySum($arr_test);
+        $this->assertFalse(false, $result);
     }
 }

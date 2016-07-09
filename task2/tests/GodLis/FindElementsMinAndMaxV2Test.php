@@ -27,6 +27,10 @@ class FindElementsMinAndMaxV2Test extends \PHPUnit_Framework_TestCase
         $arr_test = [10, 2, 3, 4, -3, 101, 6, 5, 8, 40];
         $result = $this->tmp->seachMinElement($arr_test);
         $this->assertEquals(-3, $result);
+
+        $arr_test = [];
+        $result = $this->tmp->seachMinElement($arr_test);
+        $this->assertFalse(false, $result);
     }
 
     public function testSeachMaxElement()
@@ -34,5 +38,9 @@ class FindElementsMinAndMaxV2Test extends \PHPUnit_Framework_TestCase
         $arr_test = [10, 2, 3, 4, -3, 101, 6, 101, 8, 40];
         $result = $this->tmp->seachMaxElement($arr_test);
         $this->assertEquals(101, $result);
+
+        $arr_test = [];
+        $result = $this->tmp->seachMinElement($arr_test);
+        $this->assertFalse(false, $result);
     }
 }

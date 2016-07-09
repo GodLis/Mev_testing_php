@@ -14,8 +14,11 @@ class FindElementsMinAndMax
      */
     public function seachMinElement($arr)
     {
-        $min = (int)(min($arr));
-        return $min;
+        if (!empty($arr)) {
+            $min = (int)(min($arr));
+            return $min;
+        }
+        return false;
     }
 
     /**
@@ -24,7 +27,10 @@ class FindElementsMinAndMax
      */
     public function seachMaxElement($arr)
     {
-        $max = (int)(max($arr));
-        return $max;
+        if (!empty($arr)) {
+            $max = (int)(max($arr));
+            return $max;
+        }
+        return false;
     }
 }
