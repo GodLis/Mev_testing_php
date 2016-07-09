@@ -10,18 +10,45 @@ class Parsing
 {
     public function parsing()
     {
-        ini_set("max_execution_time", "1200");
-        $from="http://www.jcmm.cz/en/photogallery.html/";
-        $str = file_get_contents($from);
-        preg_match_all("'<img\s+src=\"(\S*.(png|jpg))\"'si", $str, $ok);
-        for ($i=1; $i<count($ok[1]); $i++) {
-            $url= $from.$ok[1][$i];
-            $destination_folder="/home/godlis/Mev/Mev_testing_php/task15/files/";
-            $filename = (($pos = strrpos($url, '/')) !== false)?substr($url, $pos + 1):$url;
-            if (!copy($url, $destination_folder . $filename)) {
-                echo "не удалось скопировать $filename" . "\n";
+        $url="http://lifeexample.ru/";
+
+        /**
+         * @param $url
+         * @return mixed
+         */
+        function getContentPage($url)
+        {
+            $c = curl_init($url);
+            curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
+            $text = curl_exec($c);
+            curl_close($c);
+            return $text;
+        }
+        
+        preg_match_all("'<img\s+src=\"(\S*.(png|jpg))\"'si", getContentPage($url), $result);
+        foreach ($result[1] as $name) {
+            $row['image'][]=$name;
+        }
+        $k=0;
+
+        if (!empty($row)) {
+            while ($k<=(count($row['image'])-1)) {
+                $url=$row['image'][$k];
+                $name= $row['image'][$k];
+                $name=str_replace("http://lifeexample.ru/", "", $name);
+                echo ($k+1).") Image save: ".$name."\n";
+                $dir="";
+                $result1=explode("/", $name);
+                for ($i=0; $i<=(count($result1)-2); $i++) {
+                    if (!file_exists($dir.$result1[$i])) {
+                        mkdir($dir.$result1[$i], 0777);
+                    }
+                    $dir.=$result1[$i]."/";
+                }
+                copy($url, $name);
+                $k++;
             }
-            echo "Файл " .$url." cкопирован в: " . $destination_folder.$filename ."\n";
         }
     }
 }
