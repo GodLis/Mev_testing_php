@@ -9,26 +9,24 @@ for ($i=0; $i<$k; $i++) {
 };
 
 echo "Массив до сортировки:\n";
-
 for ($i=0; $i<$k; $i++) {
     echo ($array[$i] ." ");
 }
 
 echo "\nCортировка встроенной функцией:\n";
-
-sort($array);
-
+if (!empty($array)) {
+    sort($array);
+}
 for ($i=0; $i<$k; $i++) {
     echo $array[$i] ." ";
 }
 
 echo "\nБыстрая сортировка:\n";
-
 $tmp = new \GodLis\QuickSort();
-$tmp->quickSort($array);
-
-for ($i=0; $i<$k; $i++) {
-    echo $array[$i] ." ";
+if (!empty($arrayToQuickSort)) {
+    $tmp->quickSort($arrayToQuickSort);
 }
-
+for ($i=0; $i<$k; $i++) {
+    echo $arrayToQuickSort[$i] ." ";
+}
 echo "\n";

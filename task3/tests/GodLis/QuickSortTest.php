@@ -35,7 +35,6 @@ class QuickSortTest extends \PHPUnit_Framework_TestCase
             $this->tmp->quickSort($arr2);
         }
         $this->assertEquals(['a', 'b', 'c'], $arr2);
-
     }
 }
 

@@ -23,14 +23,15 @@ namespace GodLis;
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/GodLis/Mev_testing_php
  */
+/**
+ * Class SumElementsOfArray
+ * @package GodLis
+ */
 class SumElementsOfArray
 {
     /**
-     * Returns an a sum of elements of array
-     * SumElementsOfArray Class Doc Comment
-     *
-     * @param  $arr
-     * @return number
+     * @param $arr
+     * @return bool|number
      */
     public function arraySum($arr)
     {

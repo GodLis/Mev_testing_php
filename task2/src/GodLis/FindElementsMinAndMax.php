@@ -10,7 +10,7 @@ class FindElementsMinAndMax
 {
     /**
      * @param $arr
-     * @return int
+     * @return bool|int
      */
     public function seachMinElement($arr)
     {
@@ -23,7 +23,7 @@ class FindElementsMinAndMax
 
     /**
      * @param $arr
-     * @return int
+     * @return bool|int
      */
     public function seachMaxElement($arr)
     {

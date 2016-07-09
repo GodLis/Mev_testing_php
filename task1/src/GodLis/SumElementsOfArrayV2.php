@@ -11,7 +11,7 @@ class SumElementsOfArrayV2
 {
     /**
      * @param $arr
-     * @return int
+     * @return bool|int
      */
     public function arraySum($arr)
     {
