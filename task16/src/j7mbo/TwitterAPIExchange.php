@@ -1,12 +1,12 @@
 <?php
 
-namespace GodLis;
+namespace j7mbo;
 
 /**
  * Twitter-API-PHP : Simple PHP wrapper for the v1.1 API
- *
+ * 
  * PHP version 5.3.10
- *
+ * 
  * @category Awesomeness
  * @package  Twitter-API-PHP
  * @author   James Mallison <me@j7mbo.co.uk>

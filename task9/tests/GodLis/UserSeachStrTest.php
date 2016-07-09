@@ -39,6 +39,5 @@ class UserSeachStrTest extends \PHPUnit_Framework_TestCase
         $part = '.';
         $result = $this->tmp->userSeachStr($part, $subject);
         $this->assertEquals(true, $result);
-
     }
 }

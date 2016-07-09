@@ -22,7 +22,7 @@ class MathExpTest extends \PHPUnit_Framework_TestCase
         $this->tmp = null;
     }
 
-    public function testArraySum()
+    public function testMathExp()
     {
         $var1 = 2;
         $var2 = 3;

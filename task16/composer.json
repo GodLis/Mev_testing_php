@@ -1,17 +1,22 @@
 {
-  "name": "GodLis/Task16",
-  "minimum-stability": "dev",
-  "authors": [
-    {
-      "name": "Olechka Brajko",
-      "email": "olechka.brajko@gmail.com"
+    "require": {
+        "ext-curl": "*",
+        "phpoffice/phpexcel": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5,>=4.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "j7mbo\\": "src/j7mbo/TwitterAPIExchange.php",
+            "files": [
+                "src/j7mbo/TwitterAPIExchange.php"
+            ]
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.6",
-    "phpunit/phpunit": "5.5.x-dev"
-  },
-  "autoload": {
-    "psr-4": {"GodLis\\": "src/GodLis"}
-  }
 }

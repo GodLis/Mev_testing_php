@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace j7mbo\Tests;
 
-use GodLis\TwitterAPIExchange;
+use j7mbo\TwitterAPIExchange;
 
 /**
  * Class TwitterAPIExchangeTest

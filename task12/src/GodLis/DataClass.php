@@ -6,6 +6,10 @@ namespace GodLis;
  * Class DataClass
  * @package GodLis
  */
+/**
+ * Class DataClass
+ * @package GodLis
+ */
 class DataClass
 {
     /**

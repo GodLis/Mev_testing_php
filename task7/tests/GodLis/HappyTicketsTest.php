@@ -18,7 +18,7 @@ class HappyTicketsTest extends \PHPUnit_Framework_TestCase
         $this->tmp = null;
     }
 
-    public function testArraySum()
+    public function testHappyTickets()
     {
         $var = 6;
         $result = $this->tmp->lNum($var);

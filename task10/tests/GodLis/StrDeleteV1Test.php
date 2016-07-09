@@ -18,13 +18,17 @@ class StrDeleteV1Test extends \PHPUnit_Framework_TestCase
         $this->tmp = null;
     }
 
-    public function testArraySum()
+    public function testStrDeleteV1()
     {
         $str = "  iuy p";
         $result = $this->tmp->strDeleteV1($str);
         $this->assertEquals("iuyp", $result);
 
         $str = "      ";
+        $result = $this->tmp->strDeleteV1($str);
+        $this->assertEquals("", $result);
+
+        $str = "";
         $result = $this->tmp->strDeleteV1($str);
         $this->assertEquals("", $result);
     }
