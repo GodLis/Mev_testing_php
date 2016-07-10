@@ -1,18 +1,19 @@
 {
     "require": {
         "ext-curl": "*",
-        "phpoffice/phpexcel": "*"
+        "phpoffice/phpexcel": "*",
+        "j7mbo/twitter-api-php": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.5,>=4.5.1"
     },
     "autoload": {
         "psr-4": {
-            "j7mbo\\": "src/j7mbo/TwitterAPIExchange.php",
-            "files": [
-                "src/j7mbo/TwitterAPIExchange.php"
-            ]
-        }
+            "j7mbo\\": "src/j7mbo"
+        },
+        "files": [
+            "src/j7mbo/TwitterAPIExchange.php"
+        ]
     },
     "extra": {
         "branch-alias": {

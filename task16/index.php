@@ -4,6 +4,23 @@ ini_set('display_errors', 1);
 
 require __DIR__ .'/vendor/autoload.php';
 
+$xls = new PHPExcel();
+$xls->setActiveSheetIndex(0);
+$sheet = $xls->getActiveSheet();
+$sheet->setTitle('GetTweets');
+
+$sheet->getColumnDimension('A')->setWidth(20);
+$sheet->getColumnDimension('B')->setWidth(140);
+
+$k =1;
+// Вставляем текст в ячейку A1
+//$sheet->setCellValue("A".$k, 'Published Date');
+//$sheet->setCellValue("B".$k, 'Message');
+//
+//$objWriter = new PHPExcel_Writer_Excel5($xls);
+//$objWriter->save('tweets.xls');
+//$k=2;
+
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = [
     'oauth_access_token' => "2282217062-7NdX0yvn90OpvZMgcieGdrkzlLHK2pepkIf8g5W",
@@ -19,7 +36,6 @@ $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 $requestMethod = 'GET';
 $twitter = new \j7mbo\TwitterAPIExchange($settings);
 
-// Get ID of most recent tweet
 $getfield = '?screen_name=TutsPlusCode';
 $json = $twitter->setGetfield($getfield)
              ->buildOauth($url, $requestMethod)
@@ -27,10 +43,8 @@ $json = $twitter->setGetfield($getfield)
 $data = json_decode($json, true);
 $id = $data[0]["id"];
 
-// Temporary inc ID
 $id++;
 
-// Get Tweets by 200 until the end
 $LIMIT = 200;
 do {
     $reqestID = $id - 1;
@@ -46,6 +60,11 @@ do {
         $text = $record["text"];
         $datetime = new DateTime($record["created_at"]);
         $strdate = $datetime->format('Y-m-d H:i:s');
+        $sheet->setCellValue("A".$k, "{$strdate}");
+        $sheet->setCellValue("B".$k, "{$text}");
+        $k++;
+        $objWriter = new PHPExcel_Writer_Excel5($xls);
+        $objWriter->save('tweets.xls');
         print("{$strdate}: {$text}\n");
     }
 } while (count($data == $LIMIT));
