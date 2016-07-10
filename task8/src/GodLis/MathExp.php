@@ -9,17 +9,15 @@ namespace GodLis;
 class MathExp
 {
     /**
-     * @param $var1
-     * @param $var2
-     * @param $var3
-     * @param $var4
      * @return string
      */
-    public function mathExp($var1, $var2, $var3, $var4)
+    public function mathExp()
     {
-        if ($var1 !== 0) {
-            return (($var1 + $var2) * $var3) - ($var4 + $var2) / $var1;
+        echo "Please enter the expression you want calculate: " ."\n";
+        $str = readline();
+        if (!empty($str)) {
+            eval('$str = ' . $str . ';');
+            return "Result: ". $str;
         }
-        return false;
     }
 }
