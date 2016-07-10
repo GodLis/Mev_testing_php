@@ -8,12 +8,12 @@ for ($i=0; $i<$k; $i++) {
     $arr[$i] = random_int(1, 50);
     echo $arr[$i] ." ";
 }
-$result = new \GodLis\FindElementsMinAndMax();
+$result = new \GodLis\Task2\FindElementsMinAndMax();
 echo "\n Method1: \n";
 echo $result->seachMaxElement($arr) ."\n";
 echo $result->seachMinElement($arr) ."\n";
 
-$result2 = new \GodLis\FindElementsMinAndMaxV2();
+$result2 = new \GodLis\Task2\FindElementsMinAndMaxV2();
 echo " Method2: \n";
 echo $result2->seachMaxElement($arr) ."\n";
 echo $result2->seachMinElement($arr) ."\n";

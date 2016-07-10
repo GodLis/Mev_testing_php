@@ -1,6 +1,6 @@
 <?php
 
-namespace GodLis;
+namespace GodLis\Task12;
 
 /**
  * Class DataClass

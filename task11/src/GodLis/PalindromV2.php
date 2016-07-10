@@ -1,6 +1,6 @@
 <?php
 
-namespace GodLis;
+namespace GodLis\Task11;
 
 /**
  * Class PalindromV2

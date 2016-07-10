@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task4\Tests;
 
-use GodLis\UserFunction;
+use GodLis\Task4\UserFunction;
 
 class UserFunctionTest extends \PHPUnit_Framework_TestCase
 {

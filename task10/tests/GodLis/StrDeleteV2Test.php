@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task10\Tests;
 
-use GodLis\StrDeleteV2;
+use GodLis\Task10\StrDeleteV2;
 
 class StrDeleteV2Test extends \PHPUnit_Framework_TestCase
 {

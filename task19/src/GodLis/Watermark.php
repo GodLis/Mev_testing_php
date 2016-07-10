@@ -1,6 +1,6 @@
 <?php
 
-namespace GodLis;
+namespace GodLis\Task19;
 
 /**
  * Class Watermark
@@ -8,14 +8,14 @@ namespace GodLis;
  */
 class Watermark
 {
-    public function watermark()
+    public function watermark($sOrigImg, $sWmImg)
     {
         if (! extension_loaded('gd')) { // Проверяем установку библиотеки GD
             echo 'GD не установлено';
             exit;
         }
 
-        $sOrigImg = "/home/godlis/Mev/Mev_testing_php/task19/image.jpg";
+//        $sOrigImg = "/home/godlis/Mev/Mev_testing_php/task19/image.jpg";
         if ($sOrigImg === false) {
             die('Не удается открыть изображение');
         } else {
@@ -23,7 +23,7 @@ class Watermark
             echo "\n";
         }
 
-        $sWmImg = "/home/godlis/Mev/Mev_testing_php/task19/watermark.png";
+//        $sWmImg = "/home/godlis/Mev/Mev_testing_php/task19/watermark.png";
         if ($sWmImg=== false) {
             die('Не удается открыть изображение');
         } else {

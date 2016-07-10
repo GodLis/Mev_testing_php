@@ -1,7 +1,7 @@
 task17, geocoding
 =================
 
-task17 it`s a PHP CLI script, that that executes direct and reverse geocoding.
+task17 it`s a PHP CLI script, that executes direct and reverse geocoding.
 
 task17 works with PHP 5.6 or later.
 

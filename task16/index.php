@@ -34,7 +34,7 @@ $settings = [
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 
 $requestMethod = 'GET';
-$twitter = new \j7mbo\TwitterAPIExchange($settings);
+$twitter = new \j7mbo\Task16\TwitterAPIExchange($settings);
 
 $getfield = '?screen_name=TutsPlusCode';
 $json = $twitter->setGetfield($getfield)

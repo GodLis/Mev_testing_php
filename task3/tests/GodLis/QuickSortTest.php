@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task3\Tests;
 
-use GodLis\QuickSort;
+use GodLis\Task3\QuickSort;
 
 /**
  * Class QuickSortTest

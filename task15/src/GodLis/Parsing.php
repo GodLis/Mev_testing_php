@@ -1,6 +1,6 @@
 <?php
 
-namespace GodLis;
+namespace GodLis\Task15;
 
 /**
  * Class Parsing
@@ -8,9 +8,9 @@ namespace GodLis;
  */
 class Parsing
 {
-    public function parsing()
+    public function parsing($url)
     {
-        $url="http://lifeexample.ru/";
+//        $url="http://lifeexample.ru/";
 
         /**
          * @param $url
@@ -18,6 +18,7 @@ class Parsing
          */
         function getContentPage($url)
         {
+            $url2 = $url;
             $c = curl_init($url);
             curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);

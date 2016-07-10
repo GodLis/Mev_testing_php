@@ -1,6 +1,6 @@
 <?php
 
-namespace GodLis;
+namespace GodLis\Task5;
 
 /**
  * Class MainClass
@@ -17,7 +17,7 @@ class MainClass
     public function perebor($k, $mas, $n, $m)
     {
         if ($k == $n) {
-            for ($i=$k-3; $i<$k; $i++) {
+            for ($i=$k-$n; $i<$k; $i++) {
                 echo $mas[$i];
             }
             echo "\n";

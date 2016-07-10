@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "j7mbo\\": "src/j7mbo"
+            "j7mbo\\Task16\\": "src/j7mbo"
         },
         "files": [
             "src/j7mbo/TwitterAPIExchange.php"

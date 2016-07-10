@@ -1,8 +1,8 @@
 <?php
 
-namespace j7mbo\Tests;
+namespace j7mbo\Task16\Tests;
 
-use j7mbo\TwitterAPIExchange;
+use j7mbo\Task16\TwitterAPIExchange;
 
 /**
  * Class TwitterAPIExchangeTest

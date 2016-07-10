@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task7\Tests;
 
-use GodLis\HappyTickets;
+use GodLis\Task7\HappyTickets;
 
 class HappyTicketsTest extends \PHPUnit_Framework_TestCase
 {

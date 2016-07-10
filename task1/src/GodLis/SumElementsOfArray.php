@@ -12,7 +12,7 @@
  * @link     https://github.com/GodLis/Mev_testing_php
  */
 
-namespace GodLis;
+namespace GodLis\Task1;
 
 /**
  * Class SumElementsOfArray

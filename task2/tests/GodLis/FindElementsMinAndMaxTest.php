@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task2\Tests;
 
-use GodLis\FindElementsMinAndMax;
+use GodLis\Task2\FindElementsMinAndMax;
 
 /**
  * Class FindElementsMinAndMaxTest

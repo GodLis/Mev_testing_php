@@ -2,5 +2,5 @@
 
 require __DIR__ .'/vendor/autoload.php';
 
-$tmp = new \GodLis\Parsing();
+$tmp = new \GodLis\Task15\Parsing();
 $tmp->parsing();

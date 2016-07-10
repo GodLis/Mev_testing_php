@@ -25,6 +25,6 @@ echo "\nНахождение общих елементов функцией 'arr
 print_r($result = array_intersect($array1, $array2));
 
 echo "Нахождение общих елементов функцией пользователя:\n";
-$tmp = new \GodLis\UserFunction();
+$tmp = new \GodLis\Task4\UserFunction();
 print_r($tmp->userFunction($array1, $array2));
 

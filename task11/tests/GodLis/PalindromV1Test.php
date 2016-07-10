@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task11\Tests;
 
-use GodLis\PalindromV1;
+use GodLis\Task11\PalindromV1;
 
 class PalindromV1Test extends \PHPUnit_Framework_TestCase
 {

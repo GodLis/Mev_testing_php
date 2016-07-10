@@ -1,6 +1,6 @@
 <?php
 
-namespace j7mbo;
+namespace j7mbo\Task16;
 
 /**
  * Twitter-API-PHP : Simple PHP wrapper for the v1.1 API

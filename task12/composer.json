@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GodLis\\": "src/GodLis"
+      "GodLis\\Task12\\": "src/GodLis"
     }
   }
 }

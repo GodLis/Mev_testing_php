@@ -2,5 +2,5 @@
 
 require __DIR__ .'/vendor/autoload.php';
 
-$tmp = new \GodLis\Geocoding();
+$tmp = new \GodLis\Task17\Geocoding();
 $tmp->geocoding();

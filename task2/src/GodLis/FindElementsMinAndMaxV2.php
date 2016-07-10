@@ -1,6 +1,6 @@
 <?php
 
-namespace GodLis;
+namespace GodLis\Task2;
 
 /**
  * Class FindElementsMinAndMaxV2

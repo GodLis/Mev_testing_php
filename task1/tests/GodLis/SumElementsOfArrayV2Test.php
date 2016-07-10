@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task1\Tests;
 
-use GodLis\SumElementsOfArrayV2;
+use GodLis\Task1\SumElementsOfArrayV2;
 
 /**
  * Class SumElementsOfArrayV2Test

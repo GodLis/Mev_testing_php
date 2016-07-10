@@ -1,8 +1,8 @@
 <?php
 
-namespace GodLis\Tests;
+namespace GodLis\Task9\Tests;
 
-use GodLis\UserSeachStr;
+use GodLis\Task9\UserSeachStr;
 
 class UserSeachStrTest extends \PHPUnit_Framework_TestCase
 {

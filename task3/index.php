@@ -22,7 +22,7 @@ for ($i=0; $i<$k; $i++) {
 }
 
 echo "\nБыстрая сортировка:\n";
-$tmp = new \GodLis\QuickSort();
+$tmp = new \GodLis\Task3\QuickSort();
 if (!empty($arrayToQuickSort)) {
     $tmp->quickSort($arrayToQuickSort);
 }

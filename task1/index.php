@@ -10,8 +10,8 @@ for ($i = 0;
 }
 print_r($arr);
 
-$result1 = new \GodLis\SumElementsOfArray();
+$result1 = new \GodLis\Task1\SumElementsOfArray();
 echo $result1->arraySum($arr)."\n";
 
-$result2 = new \GodLis\SumElementsOfArrayV2();
+$result2 = new \GodLis\Task1\SumElementsOfArrayV2();
 echo $result2->arraySum($arr)."\n";

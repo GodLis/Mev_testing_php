@@ -1,7 +1,7 @@
 task7, happy tickets
 =============================================================
 
-task7 it`s a PHP CLI script, that considers number of lucky tickets for a given length of the ticket number.
+task7 it`s a PHP CLI script, that print all numbers of lucky tickets for a given length of the ticket number.
 
 task7 works with PHP 5.6 or later.
 

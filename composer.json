@@ -1,0 +1,44 @@
+{
+  "name": "GodLis/Testing_php",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Olechka Brajko",
+      "email": "olechka.brajko@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "phpunit/phpunit": "5.5.x-dev",
+    "ext-curl": "*",
+    "phpoffice/phpexcel": "*",
+    "j7mbo/twitter-api-php": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "GodLis\\Task1\\": "task1/src/GodLis",
+      "GodLis\\Task2\\": "task2/src/GodLis",
+      "GodLis\\Task3\\": "task3/src/GodLis",
+      "GodLis\\Task4\\": "task4/src/GodLis",
+      "GodLis\\Task5\\": "task5/src/GodLis",
+      "GodLis\\Task7\\": "task7/src/GodLis",
+      "GodLis\\Task8\\": "task8/src/GodLis",
+      "GodLis\\Task9\\": "task9/src/GodLis",
+      "GodLis\\Task10\\": "task10/src/GodLis",
+      "GodLis\\Task11\\": "task11/src/GodLis",
+      "GodLis\\Task12\\": "task12/src/GodLis",
+      "GodLis\\Task13\\": "task13/src/GodLis",
+      "GodLis\\Task14\\": "task14/src/GodLis",
+      "GodLis\\Task15\\": "task15/src/GodLis",
+      "GodLis\\Task16\\": "task16/src/GodLis",
+      "GodLis\\Task17\\": "task17/src/GodLis",
+      "GodLis\\Task18\\": "task18/src/GodLis",
+      "GodLis\\Task19\\": "task19/src/GodLis"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
