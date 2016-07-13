@@ -9,15 +9,16 @@ namespace GodLis\Task8;
 class MathExp
 {
     /**
-     * @return string
+     * @return bool|float|int|mixed
      */
     public function mathExp()
     {
-        echo "Please enter the expression you want calculate: " ."\n";
-        $str = readline();
-        if (!empty($str)) {
-            eval('$str = ' . $str . ';');
-            return "Result: ". $str;
+        $str = (1+2)*8;
+        $str = (float)preg_replace('/([0-9\(\)\*\-\+\/\.]*)/', '\\1', $str);
+        if ($str == '/([0-9\(\)\*\-\+\/\.]*)/') {
+            $str = eval("=".$str.";");
+            return $str;
         }
+        return false;
     }
 }
