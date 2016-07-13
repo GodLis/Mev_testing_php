@@ -38,10 +38,5 @@
       "GodLis\\Task18\\": "task18/src/GodLis",
       "GodLis\\Task19\\": "task19/src/GodLis"
     }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
   }
 }
