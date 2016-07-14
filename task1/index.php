@@ -10,8 +10,12 @@ for ($i = 0;
 }
 print_r($arr);
 
-$result1 = new \GodLis\Task1\SumElementsOfArray();
-echo $result1->arraySum($arr)."\n";
+// Consumes the configuration array
+//$config = new Zend\Config\Config(require 'config/config.php');
+//$config = Zend\Config\Factory::fromFile(__DIR__ . '/config/config.php');
 
-$result2 = new \GodLis\Task1\SumElementsOfArrayV2();
-echo $result2->arraySum($arr)."\n";
+$result = new \GodLis\Task1\SumElementsOfArray($arr);
+echo $result->arraySum() ."\n";
+
+$result = new \GodLis\Task1\SumElementsOfArrayV2($arr);
+echo $result->arraySum()."\n";

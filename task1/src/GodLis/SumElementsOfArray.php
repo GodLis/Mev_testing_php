@@ -18,25 +18,39 @@ namespace GodLis\Task1;
  * Class SumElementsOfArray
  *
  * @category Testing
- * @package  Test
+ * @package  GodLis\Task1
  * @author   Olechka Brajko <olechkabrajko@gmail.com>
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/GodLis/Mev_testing_php
  */
-/**
- * Class SumElementsOfArray
- * @package GodLis
- */
 class SumElementsOfArray
 {
     /**
+     * @var
+     */
+    public $arr;
+
+    /**
+     * SumElementsOfArray constructor.
      * @param $arr
+     */
+    public function __construct($arr)
+    {
+        $this->arr = $arr;
+    }
+
+    public function __destruct()
+    {
+        $this->arr;
+    }
+
+    /**
      * @return bool|number
      */
-    public function arraySum($arr)
+    public function arraySum()
     {
-        if (!empty($arr)) {
-            return array_sum($arr);
+        if (!empty($this->arr)) {
+            return array_sum($this->arr);
         }
         return false;
     }
