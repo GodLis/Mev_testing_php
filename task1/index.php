@@ -1,21 +1,25 @@
 <?php
-
+/**
+ * Index File Doc Comment
+ *
+ * This file is a part of a task1
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task1
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 require __DIR__ .'/vendor/autoload.php';
 
-$arr[10] = [];
-for ($i = 0;
-     $i < count($arr);
-     $i++) {
-    $arr[$i] = mt_rand(5, 15);
-}
-print_r($arr);
+$file = 'config/config.ini';
+$config = parse_ini_file($file);
+print_r($config['arr']);
 
-// Consumes the configuration array
-//$config = new Zend\Config\Config(require 'config/config.php');
-//$config = Zend\Config\Factory::fromFile(__DIR__ . '/config/config.php');
+$result = new \GodLis\Task1\ArrayAdder($config);
+echo $result->arrayAdder() ."\n";
 
-$result = new \GodLis\Task1\SumElementsOfArray($arr);
-echo $result->arraySum() ."\n";
-
-$result = new \GodLis\Task1\SumElementsOfArrayV2($arr);
-echo $result->arraySum()."\n";
+$result = new \GodLis\Task1\ArrayAdderV2($config);
+echo $result->arrayAdder()."\n";
