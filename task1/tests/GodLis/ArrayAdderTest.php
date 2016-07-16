@@ -41,6 +41,7 @@ class ArrayAdderTest extends \PHPUnit_Framework_TestCase
 
     public function testArraySum()
     {
+
         $result = $this->tmp->arrayAdder();
         assertEquals(10, $result);
 

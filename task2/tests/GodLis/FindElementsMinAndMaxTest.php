@@ -2,19 +2,19 @@
 
 namespace GodLis\Task2\Tests;
 
-use GodLis\Task2\FindElementsMinAndMax;
+use GodLis\Task2\FindMinAndMaxElements;
 
 /**
- * Class FindElementsMinAndMaxTest
+ * Class MinAndMaxFindElementsTest
  * @package OlechkaBrajko\Task2
  */
-class FindElementsMinAndMaxTest extends \PHPUnit_Framework_TestCase
+class FindMinAndMaxElementsTest extends \PHPUnit_Framework_TestCase
 {
     private $tmp;
 
     protected function setUp()
     {
-        $this->tmp = new FindElementsMinAndMax();
+        $this->tmp = new FindMinAndMaxElements();
     }
 
     protected function tearDown()

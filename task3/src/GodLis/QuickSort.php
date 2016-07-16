@@ -1,27 +1,53 @@
 <?php
-
+/**
+ * QuickSort File Doc Comment
+ *
+ * This file is a part of a task3
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task3
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 namespace GodLis\Task3;
 
 /**
  * Class QuickSort
- * @package GodLis
+ *
+ * @category Testing
+ * @package  GodLis\Task3
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
  */
 class QuickSort
 {
-    /**
-     * @param $array
+     /**
+     * QuickSort function
+     *
+     * @param array $array Configs that are transferred to use
+     *
+     * @return array $array
      */
     public function quickSort(&$array)
     {
         $left = 0;
         $right = count($array) - 1;
         $this->mySort($array, $left, $right);
+        return $array;
     }
 
     /**
-     * @param $array
-     * @param $left
-     * @param $right
+     * MySort function
+     *
+     * @param array  $array Array that`s sorted
+     * @param number $left  Temp variable
+     * @param number $right Temp variable
+     *
+     * @return array $array
      */
     public function mySort(&$array, $left, $right)
     {
@@ -51,5 +77,6 @@ class QuickSort
         if ($l < $right) {
             $this->mySort($array, $l, $right);
         }
+        return $array;
     }
 }

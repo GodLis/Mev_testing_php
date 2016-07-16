@@ -18,8 +18,10 @@ $file = 'config/config.ini';
 $config = parse_ini_file($file);
 print_r($config['arr']);
 
+echo "Result 1: ";
 $result = new \GodLis\Task1\ArrayAdder($config);
 echo $result->arrayAdder() ."\n";
 
+echo "Result 2: ";
 $result = new \GodLis\Task1\ArrayAdderV2($config);
 echo $result->arrayAdder()."\n";

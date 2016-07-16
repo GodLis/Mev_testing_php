@@ -1,32 +1,34 @@
 <?php
+/**
+ * Index File Doc Comment
+ *
+ * This file is a part of a task3
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task3
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 
 require __DIR__ .'/vendor/autoload.php';
 
-$k = mt_rand(5, 20);
-$array[$k] = [];
-for ($i=0; $i<$k; $i++) {
-    $arrayToQuickSort[$i] = $array[$i] = random_int(1, 50);
-};
-
+$file = 'config/config.ini';
+$config = parse_ini_file($file);
+$arrToQuickSort = $arr = $config['arr'];
 echo "Массив до сортировки:\n";
-for ($i=0; $i<$k; $i++) {
-    echo ($array[$i] ." ");
-}
+print_r($config['arr']);
 
 echo "\nCортировка встроенной функцией:\n";
-if (!empty($array)) {
-    sort($array);
-}
-for ($i=0; $i<$k; $i++) {
-    echo $array[$i] ." ";
+if (!empty($config['arr'])) {
+    sort($arr);
+    print_r($arr);
 }
 
 echo "\nБыстрая сортировка:\n";
 $tmp = new \GodLis\Task3\QuickSort();
-if (!empty($arrayToQuickSort)) {
-    $tmp->quickSort($arrayToQuickSort);
+if (!empty($arrToQuickSort)) {
+    print_r($tmp->quickSort($arrToQuickSort));
 }
-for ($i=0; $i<$k; $i++) {
-    echo $arrayToQuickSort[$i] ." ";
-}
-echo "\n";
