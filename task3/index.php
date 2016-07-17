@@ -17,18 +17,21 @@ require __DIR__ .'/vendor/autoload.php';
 
 $file = 'config/config.ini';
 $config = parse_ini_file($file);
-$arrToQuickSort = $arr = $config['arr'];
-echo "Массив до сортировки:\n";
-print_r($config['arr']);
+$arrToQuickSort = $config['arr'];
 
-echo "\nCортировка встроенной функцией:\n";
 if (!empty($config['arr'])) {
-    sort($arr);
-    print_r($arr);
+    echo "Массив до сортировки:\n";
+    print_r($config['arr']);
 }
 
-echo "\nБыстрая сортировка:\n";
-$tmp = new \GodLis\Task3\QuickSort();
-if (!empty($arrToQuickSort)) {
-    print_r($tmp->quickSort($arrToQuickSort));
+$tmp = new \GodLis\Task3\SortArrayInBuiltFunction($config);
+if (!empty($config['arr'])) {
+    echo "\nCортировка встроенной функцией:\n";
+    print_r($tmp->sortArrayInBuiltFunction());
+}
+
+$tmp = new \GodLis\Task3\QuickSort($config);
+if (!empty($config['arr'])) {
+    echo "\nБыстрая сортировка:\n";
+    print_r($tmp->quickSort());
 }

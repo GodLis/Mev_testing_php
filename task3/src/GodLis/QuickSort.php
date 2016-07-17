@@ -25,19 +25,42 @@ namespace GodLis\Task3;
  */
 class QuickSort
 {
+    /**
+     * QuickSort variable
+     *
+     * @var
+     */
+    protected $array;
+
+    /**
+     * QuickSort constructor.
+     *
+     * @param array $config Configs that are transferred to use
+     */
+    public function __construct($config)
+    {
+        $this->array = $config['arr'];
+    }
+
+    /**
+     * QuickSort destructor.
+     */
+    public function __destruct()
+    {
+        $this->array;
+    }
+
      /**
      * QuickSort function
      *
-     * @param array $array Configs that are transferred to use
-     *
      * @return array $array
      */
-    public function quickSort(&$array)
+    public function quickSort()
     {
         $left = 0;
-        $right = count($array) - 1;
-        $this->mySort($array, $left, $right);
-        return $array;
+        $right = count($this->array) - 1;
+        $this->mySort($this->array, $left, $right);
+        return $this->array;
     }
 
     /**
