@@ -2,7 +2,7 @@
 /**
  * Index File Doc Comment
  *
- * This file is a part of a task3
+ * This file is a part of a task4
  *
  * PHP version 7
  *
@@ -13,25 +13,6 @@
  * @link     https://github.com/GodLis/Mev_testing_php
  */
 require __DIR__ .'/vendor/autoload.php';
-
-//$k = mt_rand(20, 30);
-//$array1[] = [];
-//$array2[] = [];
-//
-//for ($i=0; $i<$k; $i++) {
-//    $array1[$i] = random_int(1, 30);
-//    $array2[$i] = random_int(1, 30);
-//};
-//
-//echo "Массив 1\n";
-//for ($i=0; $i<$k; $i++) {
-//    echo ($array1[$i] ." ");
-//};
-//
-//echo "\nМассив 2\n";
-//for ($i=0; $i<$k; $i++) {
-//    echo ($array2[$i] ." ");
-//};
 
 $file = 'config/config.ini';
 $config = parse_ini_file($file);

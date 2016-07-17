@@ -13,8 +13,8 @@ echo $pattern ."\n";
 
 $tmp = new \GodLis\Task9\RegExpStr();
 echo "Поиск RegExp: ";
-echo $res = $tmp->regExpStr($pattern, $subject) ."\n";
+print_r($res = $tmp->regExpStr($pattern, $subject));
 
 $tmp = new \GodLis\Task9\UserSeachStr();
-echo "Поиск вручную: ";
+echo "\nПоиск вручную: ";
 $tmp->userSeachStr($part, $subject) ."\n";

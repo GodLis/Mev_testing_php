@@ -53,15 +53,27 @@ or download the [master.zip](https://github.com/GodLis/Mev_testing_php/archive/m
 
 To start a PHP CLI script you need to do the following:
 
-You need to install composer into this project:
+You need open a folder with some task into this project and doing:
 
 ```
+$ cd path/to/task
+
 $ composer install
-```
 
-Specify the path to task1 and doing:
-
-```
 $ php index.php
 ```
+
+Tests
+-----
+
+To run the test suite of some task you need Composer and PHPUnit:
+
+```
+$ cd path/to/task
+
+$ composer install
+
+$ phpunit
+```
+
 
