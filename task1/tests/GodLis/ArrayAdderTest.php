@@ -27,28 +27,36 @@ use GodLis\Task1\ArrayAdder;
  */
 class ArrayAdderTest extends \PHPUnit_Framework_TestCase
 {
-    private $tmp;
+    /**
+     * ArrayAdderTest variable
+     *
+     * @var
+     */
+    protected $tmp;
 
-    protected function setUp()
+    /**
+     * ArrayAdderTest function
+     *
+     * @return \testing
+     */
+    public function testArrayAdder()
     {
-        $this->tmp = new ArrayAdder();
-    }
-
-    protected function tearDown()
-    {
-        $this->tmp = null;
-    }
-
-    public function testArraySum()
-    {
-
+        $config['arr'] =  [1, 2, 3, 4];
+        $this->tmp = new ArrayAdder($config);
         $result = $this->tmp->arrayAdder();
-        assertEquals(10, $result);
+        $this->assertEquals(10, $result);
+        $this->tmp = null;
 
-        $result = $this->tmp->arraySum();
-        assertEquals(-4, $result);
+        $config['arr'] =  [-1, 0, -3];
+        $this->tmp = new ArrayAdder($config);
+        $result = $this->tmp->arrayAdder();
+        $this->assertEquals(-4, $result);
+        $this->tmp = null;
 
-        $result = $this->tmp->arraySum();
-        assertFalse(false, $result);
+        $config['arr'] =  [];
+        $this->tmp = new ArrayAdder($config);
+        $result = $this->tmp->arrayAdder();
+        $this->assertEquals(false, $result);
+        $this->tmp = null;
     }
 }

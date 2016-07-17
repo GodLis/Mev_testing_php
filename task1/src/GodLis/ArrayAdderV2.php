@@ -24,10 +24,6 @@ namespace GodLis\Task1;
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/GodLis/Mev_testing_php
  */
-/**
- * Class ArrayAdderV2
- * @package GodLis\Task1
- */
 class ArrayAdderV2
 {
     /**
@@ -41,7 +37,7 @@ class ArrayAdderV2
     /**
      * ArrayAdderV2 constructor.
      *
-     * @param $config
+     * @param array $config The data that we transmit for processing
      */
     public function __construct($config)
     {

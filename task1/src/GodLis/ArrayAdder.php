@@ -36,7 +36,7 @@ class ArrayAdder
     /**
      * ArrayAdder constructor.
      *
-     * @param $config
+     * @param array $config The data that we transmit for processing
      */
     public function __construct($config)
     {

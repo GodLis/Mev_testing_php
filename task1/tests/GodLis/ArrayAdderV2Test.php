@@ -1,39 +1,62 @@
 <?php
-
+/**
+ * ArrayAdderV2Test File Doc Comment
+ *
+ * This file is a part of a task1
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task1\Tests
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 namespace GodLis\Task1\Tests;
 
-use GodLis\Task1\SumElementsOfArrayV2;
+use GodLis\Task1\ArrayAdderV2;
 
 /**
  * Class ArrayAdderV2Test
- * @package GodLis\Tests
+ *
+ * @category Testing
+ * @package  GodLis\Task1\Tests
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
  */
 class ArrayAdderV2Test extends \PHPUnit_Framework_TestCase
 {
-    private $tmp;
+    /**
+     * ArrayAdderV2Test variable
+     *
+     * @var
+     */
+    protected $tmp;
 
-    protected function setUp()
+    /**
+     * ArrayAdderV2Test function
+     *
+     * @return \testing
+     */
+    public function testArrayAdder()
     {
-        $this->tmp = new SumElementsOfArrayV2();
-    }
-
-    protected function tearDown()
-    {
-        $this->tmp = null;
-    }
-
-    public function testArraySum()
-    {
-        $arr_test = [1,2,3,4,0,0,0,0,0,10];
-        $result = $this->tmp->arraySum($arr_test);
+        $config['arr'] = [1,2,3,4,0,0,0,0,0,10];
+        $this->tmp = new ArrayAdderV2($config);
+        $result = $this->tmp->ArrayAdder();
         $this->assertEquals(20, $result);
+        $this->tmp = null;
 
-        $arr_test = [5];
-        $result = $this->tmp->arraySum($arr_test);
+        $config['arr'] = [5];
+        $this->tmp = new ArrayAdderV2($config);
+        $result = $this->tmp->ArrayAdder();
         $this->assertEquals(5, $result);
+        $this->tmp = null;
 
-        $arr_test = [];
-        $result = $this->tmp->arraySum($arr_test);
-        $this->assertFalse(false, $result);
+        $config['arr'] = [];
+        $this->tmp = new ArrayAdderV2($config);
+        $result = $this->tmp->ArrayAdder();
+        $this->assertEquals(0, $result);
+        $this->tmp = null;
     }
 }
