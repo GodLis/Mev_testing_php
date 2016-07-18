@@ -14,12 +14,14 @@
  */
 require __DIR__ .'/vendor/autoload.php';
 
-//$file = 'config/config.ini';
-//$config = parse_ini_file($file);
-//$arrToQuickSort = $arr = $config['arr'];
+$file = 'config/config.ini';
+$config = parse_ini_file($file);
 
-$mas = [];
-$m = mt_rand(4, 6);
-$n = mt_rand(2, 4);
-$tmp = new \GodLis\Task5\SortingEmbodiments();
-$tmp->sortingEmbodiments(0, $mas, $n, $m);
+if (!empty($config['n'] && $config['m']) && ($config['n'] || $config['m']) != 0) {
+    echo "n = ". $config['n'];
+    echo "\nm = ". $config['m'] ."\n";
+    $tmp = new \GodLis\Task5\SortingEmbodiments();
+    $tmp->sortingEmbodiments(0, $config['mas'], $config['n'], $config['m']);
+} else {
+    exit(1);
+}
