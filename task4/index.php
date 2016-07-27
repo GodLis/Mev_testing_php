@@ -12,6 +12,7 @@
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/GodLis/Mev_testing_php
  */
+
 require __DIR__ .'/vendor/autoload.php';
 
 $file = 'config/config.ini';
@@ -26,11 +27,11 @@ if (!empty($config['array1'] && $config['array2'])) {
     print_r($config['array2']);
 
     echo "\nНахождение общих елементов функцией 'array_intersect':\n";
-    $tmp = new \GodLis\Task4\ArrayIntersectFunction($config);
+    $tmp = new GodLis\Task4\ArrayIntersectFunction($config);
     print_r($tmp->arrayIntersectFunction());
 
     echo "Нахождение общих елементов функцией пользователя:\n";
-    $tmp = new \GodLis\Task4\UserFunction($config);
+    $tmp = new GodLis\Task4\UserFunction($config);
     print_r($tmp->userFunction());
 } else {
     exit(1);

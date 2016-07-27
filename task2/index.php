@@ -19,12 +19,12 @@ $file = 'config/config.ini';
 $config = parse_ini_file($file);
 print_r($config['arr']);
 
-$result = new \GodLis\Task2\FindMinAndMaxElements($config);
+$result = new GodLis\Task2\FindMinAndMaxElements($config);
 echo "Method1: \n";
 echo "Max Element = " . $result->seachMaxElement() ."\n";
 echo "Min Element = " . $result->seachMinElement() ."\n";
 
-$result2 = new \GodLis\Task2\FindMinAndMaxElementsV2($config);
+$result2 = new GodLis\Task2\FindMinAndMaxElementsV2($config);
 echo " Method2: \n";
 echo "Max Element = " . $result2->seachMaxElement() ."\n";
 echo "Min Element = " . $result2->seachMinElement() ."\n";

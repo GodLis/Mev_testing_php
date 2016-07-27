@@ -12,6 +12,6 @@
     "phpunit/phpunit": "5.5.x-dev"
   },
   "autoload": {
-    "psr-4": {"GodLis\\Task3\\": "src/GodLis"}
+    "psr-4": {"GodLis\\Task3\\": "src"}
   }
 }

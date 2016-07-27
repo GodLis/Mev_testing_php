@@ -13,13 +13,13 @@
 
     <testsuites>
         <testsuite name="GodLis Test Suite">
-            <directory>./tests/GodLis/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 
   <filter>
         <whitelist>
-            <directory>./src/GodLis/</directory>
+            <directory>./src/</directory>
         </whitelist>
     </filter>
 

@@ -24,13 +24,13 @@ if (!empty($config['arr'])) {
     print_r($config['arr']);
 }
 
-$tmp = new \GodLis\Task3\SortArrayInBuiltFunction($config);
+$tmp = new GodLis\Task3\SortArrayInBuiltFunction($config);
 if (!empty($config['arr'])) {
     echo "\nCортировка встроенной функцией:\n";
     print_r($tmp->sortArrayInBuiltFunction());
 }
 
-$tmp = new \GodLis\Task3\QuickSort($config);
+$tmp = new GodLis\Task3\QuickSort($config);
 if (!empty($config['arr'])) {
     echo "\nБыстрая сортировка:\n";
     print_r($tmp->quickSort());
