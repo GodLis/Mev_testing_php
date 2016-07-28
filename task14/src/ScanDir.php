@@ -1,15 +1,36 @@
 <?php
+/**
+ * ScanDir File Doc Comment
+ *
+ * This file is a part of a task14
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task14
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 
 namespace GodLis\Task14;
 
 /**
  * Class ScanDir
- * @package GodLis
+ *
+ * @category Testing
+ * @package  GodLis\Task14
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
  */
 class ScanDir
 {
     /**
-     * @param $dir
+     * ScanDir function
+     *
+     * @param string $dir Configs that are transferred to use
+     *
      * @return array
      */
     public function scanDir($dir)
