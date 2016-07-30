@@ -15,11 +15,20 @@
 
 require __DIR__ .'/vendor/autoload.php';
 
-$file = 'config/config.ini';
-$config = parse_ini_file($file);
-
-if (!empty($config['exp'])) {
-    $tmp = new GodLis\Task8\MathExp($config);
+//$file = 'config/config.ini';
+//$config = parse_ini_file($file);
+//
+//if (!empty($config)) {
+//    $tmp = new GodLis\Task8\MathExp($config);
+//    echo $tmp->mathExp() ."\n";
+//} else {
+//    exit(1);
+//}
+//
+//$str = readline("Expression: ");
+$str = (1+3)*3;
+if (!empty($str)) {
+    $tmp = new GodLis\Task8\MathExp($str);
     echo $tmp->mathExp() ."\n";
 } else {
     exit(1);

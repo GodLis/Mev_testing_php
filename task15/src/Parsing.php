@@ -1,24 +1,49 @@
 <?php
+/**
+ * Parsing File Doc Comment
+ *
+ * This file is a part of a task15
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task15
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 
 namespace GodLis\Task15;
 
 /**
  * Class Parsing
- * @package GodLis
+ *
+ * @category Testing
+ * @package  GodLis\Task15
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
  */
 class Parsing
 {
+    /**
+     * Parsing function
+     *
+     * @param string $url Configs that are transferred to use
+     *
+     * @return void
+     */
     public function parsing($url)
     {
-//        $url="http://lifeexample.ru/";
-
         /**
-         * @param $url
+         * Parsing function
+         *
+         * @param string $url Configs that are transferred to use
+         *
          * @return mixed
          */
         function getContentPage($url)
         {
-            $url2 = $url;
             $c = curl_init($url);
             curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);

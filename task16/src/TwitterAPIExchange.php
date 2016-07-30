@@ -1,65 +1,95 @@
 <?php
+/**
+ * TwitterAPIExchange Class Doc Comment
+ *
+ * This file is a part of a task16
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task16
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 
-namespace j7mbo\Task16;
+namespace GodLis\Task16;
 
 /**
  * Twitter-API-PHP : Simple PHP wrapper for the v1.1 API
- * 
+ *
  * PHP version 5.3.10
- * 
+ *
  * @category Awesomeness
  * @package  Twitter-API-PHP
  * @author   James Mallison <me@j7mbo.co.uk>
  * @license  MIT License
- * @version  1.0.4
  * @link     http://github.com/j7mbo/twitter-api-php
  */
 class TwitterAPIExchange
 {
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    private $oauth_access_token;
+    protected $oauth_access_token;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    private $oauth_access_token_secret;
+    protected $oauth_access_token_secret;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    private $consumer_key;
+    protected $consumer_key;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    private $consumer_secret;
+    protected $consumer_secret;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var array
      */
-    private $postfields;
+    protected $postfields;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    private $getfield;
+    protected $getfield;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var mixed
      */
     protected $oauth;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    public $url;
+    protected $url;
 
     /**
+     * TwitterAPIExchange variable
+     *
      * @var string
      */
-    public $requestMethod;
+    protected $requestMethod;
 
     /**
      * Create the API access object. Requires an array of settings::
@@ -67,22 +97,21 @@ class TwitterAPIExchange
      * These are all available by creating your own application on dev.twitter.com
      * Requires the cURL library
      *
-     * @throws \Exception When cURL isn't installed or incorrect settings parameters are provided
+     * @param array $settings Configs that are transfer to use
      *
-     * @param array $settings
+     * @throws \Exception When cURL isn't installed or incorrect settings parameters are provided
      */
     public function __construct(array $settings)
     {
-        if (!in_array('curl', get_loaded_extensions())) 
-        {
+        if (!in_array('curl', get_loaded_extensions())) {
             throw new Exception('You need to install cURL, see: http://curl.haxx.se/docs/install.html');
         }
         
         if (!isset($settings['oauth_access_token'])
             || !isset($settings['oauth_access_token_secret'])
             || !isset($settings['consumer_key'])
-            || !isset($settings['consumer_secret']))
-        {
+            || !isset($settings['consumer_secret'])
+        ) {
             throw new Exception('Make sure you are passing in the correct parameters');
         }
 
@@ -103,20 +132,16 @@ class TwitterAPIExchange
      */
     public function setPostfields(array $array)
     {
-        if (!is_null($this->getGetfield())) 
-        { 
-            throw new Exception('You can only choose get OR post fields.'); 
+        if (!is_null($this->getGetfield())) {
+            throw new Exception('You can only choose get OR post fields.');
         }
         
-        if (isset($array['status']) && substr($array['status'], 0, 1) === '@')
-        {
+        if (isset($array['status']) && substr($array['status'], 0, 1) === '@') {
             $array['status'] = sprintf("\0%s", $array['status']);
         }
 
-        foreach ($array as $key => &$value)
-        {
-            if (is_bool($value))
-            {
+        foreach ($array as $key => &$value) {
+            if (is_bool($value)) {
                 $value = ($value === true) ? 'true' : 'false';
             }
         }
@@ -133,27 +158,24 @@ class TwitterAPIExchange
     
     /**
      * Set getfield string, example: '?screen_name=J7mbo'
-     * 
+     *
      * @param string $string Get key and value pairs as string
      *
      * @throws \Exception
-     * 
+     *
      * @return \TwitterAPIExchange Instance of self for method chaining
      */
     public function setGetfield($string)
     {
-        if (!is_null($this->getPostfields())) 
-        { 
-            throw new Exception('You can only choose get OR post fields.'); 
+        if (!is_null($this->getPostfields())) {
+            throw new Exception('You can only choose get OR post fields.');
         }
         
         $getfields = preg_replace('/^\?/', '', explode('&', $string));
-        $params = array();
+        $params = [];
 
-        foreach ($getfields as $field)
-        {
-            if ($field !== '')
-            {
+        foreach ($getfields as $field) {
+            if ($field !== '') {
                 list($key, $value) = explode('=', $field);
                 $params[$key] = $value;
             }
@@ -166,7 +188,7 @@ class TwitterAPIExchange
     
     /**
      * Get getfield string (simple getter)
-     * 
+     *
      * @return string $this->getfields
      */
     public function getGetfield()
@@ -176,7 +198,7 @@ class TwitterAPIExchange
     
     /**
      * Get postfields array (simple getter)
-     * 
+     *
      * @return array $this->postfields
      */
     public function getPostfields()
@@ -197,8 +219,7 @@ class TwitterAPIExchange
      */
     public function buildOauth($url, $requestMethod)
     {
-        if (!in_array(strtolower($requestMethod), array('post', 'get')))
-        {
+        if (!in_array(strtolower($requestMethod), array('post', 'get'))) {
             throw new Exception('Request method must be either POST or GET');
         }
         
@@ -207,28 +228,27 @@ class TwitterAPIExchange
         $oauth_access_token        = $this->oauth_access_token;
         $oauth_access_token_secret = $this->oauth_access_token_secret;
         
-        $oauth = array(
+        $oauth = [
             'oauth_consumer_key' => $consumer_key,
             'oauth_nonce' => time(),
             'oauth_signature_method' => 'HMAC-SHA1',
             'oauth_token' => $oauth_access_token,
             'oauth_timestamp' => time(),
             'oauth_version' => '1.0'
-        );
+        ];
         
         $getfield = $this->getGetfield();
         
-        if (!is_null($getfield))
-        {
+        if (!is_null($getfield)) {
             $getfields = str_replace('?', '', explode('&', $getfield));
 
-            foreach ($getfields as $g)
-            {
+            foreach ($getfields as $g) {
                 $split = explode('=', $g);
 
-                /** In case a null is passed through **/
-                if (isset($split[1]))
-                {
+                /**
+                 * In case a null is passed through
+                 **/
+                if (isset($split[1])) {
                     $oauth[$split[0]] = urldecode($split[1]);
                 }
             }
@@ -256,42 +276,37 @@ class TwitterAPIExchange
     
     /**
      * Perform the actual data retrieval from the API
-     * 
+     *
      * @param boolean $return      If true, returns data. This is left in for backward compatibility reasons
      * @param array   $curlOptions Additional Curl options for this request
      *
      * @throws \Exception
-     * 
+     *
      * @return string json If $return param is true, returns json data.
      */
-    public function performRequest($return = true, $curlOptions = array())
+    public function performRequest($return = true, $curlOptions = [])
     {
-        if (!is_bool($return))
-        {
+        if (!is_bool($return)) {
             throw new Exception('performRequest parameter must be true or false');
         }
 
-        $header =  array($this->buildAuthorizationHeader($this->oauth), 'Expect:');
+        $header =  [$this->buildAuthorizationHeader($this->oauth), 'Expect:'];
 
         $getfield = $this->getGetfield();
         $postfields = $this->getPostfields();
 
-        $options = array(
+        $options = [
             CURLOPT_HTTPHEADER => $header,
             CURLOPT_HEADER => false,
             CURLOPT_URL => $this->url,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_TIMEOUT => 10,
-        ) + $curlOptions;
+            ] + $curlOptions;
 
-        if (!is_null($postfields))
-        {
+        if (!is_null($postfields)) {
             $options[CURLOPT_POSTFIELDS] = http_build_query($postfields);
-        }
-        else
-        {
-            if ($getfield !== '')
-            {
+        } else {
+            if ($getfield !== '') {
                 $options[CURLOPT_URL] .= $getfield;
             }
         }
@@ -300,8 +315,7 @@ class TwitterAPIExchange
         curl_setopt_array($feed, $options);
         $json = curl_exec($feed);
 
-        if (($error = curl_error($feed)) !== '')
-        {
+        if (($error = curl_error($feed)) !== '') {
             curl_close($feed);
 
             throw new \Exception($error);
@@ -314,42 +328,43 @@ class TwitterAPIExchange
     
     /**
      * Private method to generate the base string used by cURL
-     * 
-     * @param string $baseURI
-     * @param string $method
-     * @param array  $params
-     * 
+     *
+     * @param string $baseURI Configs that are transfer to use
+     * @param string $method  Configs that are transfer to use
+     * @param array  $params  Configs that are transfer to use
+     *
      * @return string Built base string
      */
-    private function buildBaseString($baseURI, $method, $params) 
+    private function buildBaseString($baseURI, $method, $params)
     {
-        $return = array();
+        $return = [];
         ksort($params);
 
-        foreach($params as $key => $value)
-        {
+        foreach ($params as $key => $value) {
             $return[] = rawurlencode($key) . '=' . rawurlencode($value);
         }
         
-        return $method . "&" . rawurlencode($baseURI) . '&' . rawurlencode(implode('&', $return)); 
+        return $method . "&" . rawurlencode($baseURI) . '&' . rawurlencode(implode('&', $return));
     }
     
     /**
      * Private method to generate authorization header used by cURL
-     * 
+     *
      * @param array $oauth Array of oauth data generated by buildOauth()
-     * 
+     *
      * @return string $return Header used by cURL for request
-     */    
+     */
     private function buildAuthorizationHeader(array $oauth)
     {
         $return = 'Authorization: OAuth ';
-        $values = array();
+        $values = [];
         
-        foreach($oauth as $key => $value)
-        {
-            if (in_array($key, array('oauth_consumer_key', 'oauth_nonce', 'oauth_signature',
-                'oauth_signature_method', 'oauth_timestamp', 'oauth_token', 'oauth_version'))) {
+        foreach ($oauth as $key => $value) {
+            if (in_array(
+                $key,
+                ['oauth_consumer_key', 'oauth_nonce', 'oauth_signature',
+                'oauth_signature_method', 'oauth_timestamp', 'oauth_token', 'oauth_version']
+            )) {
                 $values[] = "$key=\"" . rawurlencode($value) . "\"";
             }
         }
@@ -361,23 +376,20 @@ class TwitterAPIExchange
     /**
      * Helper method to perform our request
      *
-     * @param string $url
-     * @param string $method
-     * @param string $data
-     * @param array  $curlOptions
+     * @param string $url         Configs that are transfer to use
+     * @param string $method      Configs that are transfer to use
+     * @param string $data        Configs that are transfer to use
+     * @param array  $curlOptions Configs that are transfer to use
      *
      * @throws \Exception
      *
      * @return string The json response from the server
      */
-    public function request($url, $method = 'get', $data = null, $curlOptions = array())
+    public function request($url, $method = 'get', $data = null, $curlOptions = [])
     {
-        if (strtolower($method) === 'get')
-        {
+        if (strtolower($method) === 'get') {
             $this->setGetfield($data);
-        }
-        else
-        {
+        } else {
             $this->setPostfields($data);
         }
 

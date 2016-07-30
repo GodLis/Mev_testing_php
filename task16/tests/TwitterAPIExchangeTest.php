@@ -1,8 +1,21 @@
 <?php
+/**
+ * TwitterAPIExchangeTest Class Doc Comment
+ *
+ * This file is a part of a task16
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task16\Tests
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 
-namespace j7mbo\Task16\Tests;
+namespace GodLis\Task16\Tests;
 
-use j7mbo\Task16\TwitterAPIExchange;
+use GodLis\Task16\TwitterAPIExchange;
 
 /**
  * Class TwitterAPIExchangeTest
@@ -55,7 +68,9 @@ class TwitterAPIExchangeTest extends \PHPUnit_Framework_TestCase
     {
         $settings  = array();
 
-        /** Because I'm lazy... **/
+        /**
+ * Because I'm lazy... 
+**/
         $reflector = new \ReflectionClass($this);
 
         foreach ($reflector->getConstants() as $key => $value)
@@ -189,7 +204,9 @@ class TwitterAPIExchangeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertContains($expected, $data);
 
-        /** Store the media id for later **/
+        /**
+ * Store the media id for later 
+**/
         $data = @json_decode($data, true);
 
         $this->assertArrayHasKey('media_id', is_array($data) ? $data : array());
@@ -204,8 +221,7 @@ class TwitterAPIExchangeTest extends \PHPUnit_Framework_TestCase
      */
     public function testStatusesUpdate()
     {
-        if (!self::$mediaId)
-        {
+        if (!self::$mediaId) {
             $this->fail('Cannot /update status because /upload failed');
         }
 
@@ -222,14 +238,18 @@ class TwitterAPIExchangeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertContains($expected, $data);
 
-        /** Store the tweet id for testStatusesDestroy() **/
+        /**
+ * Store the tweet id for testStatusesDestroy() 
+**/
         $data = @json_decode($data, true);
 
         $this->assertArrayHasKey('id_str', is_array($data) ? $data : array());
 
         self::$tweetId = $data['id_str'];
 
-        /** We've done this now, yay **/
+        /**
+ * We've done this now, yay 
+**/
         self::$mediaId = null;
     }
 
@@ -240,8 +260,7 @@ class TwitterAPIExchangeTest extends \PHPUnit_Framework_TestCase
      */
     public function testStatusesDestroy()
     {
-        if (!self::$tweetId)
-        {
+        if (!self::$tweetId) {
             $this->fail('Cannot /destroy status because /update failed');
         }
 
@@ -256,7 +275,9 @@ class TwitterAPIExchangeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertContains($expected, $data);
 
-        /** We've done this now, yay **/
+        /**
+ * We've done this now, yay 
+**/
         self::$tweetId = null;
     }
 

@@ -1,4 +1,17 @@
 <?php
+/**
+ * Index File Doc Comment
+ *
+ * This file is a part of a task16
+ *
+ * PHP version 7
+ *
+ * @category Testing
+ * @package  GodLis\Task16
+ * @author   Olechka Brajko <olechkabrajko@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/GodLis/Mev_testing_php
+ */
 
 ini_set('display_errors', 1);
 
@@ -21,7 +34,9 @@ $k =1;
 //$objWriter->save('tweets.xls');
 //$k=2;
 
-/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
+/**
+ * Set access tokens here - see: https://dev.twitter.com/apps/ 
+**/
 $settings = [
     'oauth_access_token' => "2282217062-7NdX0yvn90OpvZMgcieGdrkzlLHK2pepkIf8g5W",
     'oauth_access_token_secret' => "oBHJEMM1fvntVH86rCoXgV2zj2VySPAxjO2WNiUnvh7sJ",
@@ -29,17 +44,21 @@ $settings = [
     'consumer_secret' => "ILaPrj7xKdpBlqq8q3Dw3kcJKnIL1tVFipNy5cVeP7ulcZsboY"
 ];
 
-/** Perform a GET request and echo the response **/
-/** Note: Set the GET field BEFORE calling buildOauth(); **/
+/**
+ * Perform a GET request and echo the response 
+**/
+/**
+ * Note: Set the GET field BEFORE calling buildOauth(); 
+**/
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 
 $requestMethod = 'GET';
-$twitter = new \j7mbo\Task16\TwitterAPIExchange($settings);
+$twitter = new GodLis\Task16\TwitterAPIExchange($settings);
 
 $getfield = '?screen_name=TutsPlusCode';
 $json = $twitter->setGetfield($getfield)
-             ->buildOauth($url, $requestMethod)
-             ->performRequest();
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
 $data = json_decode($json, true);
 $id = $data[0]["id"];
 
@@ -52,8 +71,8 @@ do {
 		&count={$LIMIT}
 		&max_id={$reqestID}";
     $json = $twitter->setGetfield($getfield)
-         ->buildOauth($url, $requestMethod)
-         ->performRequest();
+        ->buildOauth($url, $requestMethod)
+        ->performRequest();
     $data = json_decode($json, true);
     $id = end($data)["id"];
     foreach ($data as $record) {

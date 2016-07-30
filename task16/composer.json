@@ -9,10 +9,10 @@
     },
     "autoload": {
         "psr-4": {
-            "j7mbo\\Task16\\": "src/j7mbo"
+            "GodLis\\Task16\\": "src"
         },
         "files": [
-            "src/j7mbo/TwitterAPIExchange.php"
+            "src/TwitterAPIExchange.php"
         ]
     },
     "extra": {

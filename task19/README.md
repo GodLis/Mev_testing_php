@@ -31,14 +31,3 @@ Specify the path to the autoload file and doing:
 $ php autoload.php
 ```
 
-Tests
------
-
-To run the test suite, you need Composer and PHPUnit:
-
-```
-$ composer install
-
-$ phpunit
-```
-
